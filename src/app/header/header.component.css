@@ -1,0 +1,21 @@
+header .navbar-nav .nav-link {
+    margin: 0 10px;
+    color: var(--carBlack-color--);
+    font-weight: 300;
+    font-size:15px ;
+}
+header .navbar-nav .nav-link.active,
+header .navbar-nav .nav-link:hover{
+    color: var(--carPrimary-color--);
+}
+header .navbar-nav .nav-link.contact{
+    color: var(--carPrimary-color--);
+    font-weight: 500;
+}
+
+header .navbar-nav .nav-link.ctm-btn {
+    background:var(--carPrimary-color--);
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: var(--carWhite-color--);
+}

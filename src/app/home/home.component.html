@@ -1,0 +1,523 @@
+<section class="banner-section section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Car Transport made Quick, Safe, & Affordable</h1>
+                <h3>This Auto Transport is the number one rated car transporter in the U.S.</h3>
+            </div>
+            <div class="col-md-6">
+                <div class="ctm-form sm-form">
+                    <div class="form-title">
+                        <h2>Fill the Form</h2>
+                    </div>
+                    <form [formGroup]="mailForm" (submit)="send()">
+                        <div class="mb-3 ctm-field">
+                            <img src="../../assets/images/location-from.svg" alt="">
+                            <input type="text" class="form-control" placeholder="Kalida, OH" formControlName="from_locaton">
+                        </div>
+                        <div class="mb-3 ctm-field">
+                            <img src="../../assets/images/location-to.svg" alt="">
+                            <input type="text" class="form-control" placeholder="Harned, KY" formControlName="to_locaton">
+                        </div>
+                        <div class="mb-3 ctm-field">
+                            <img src="../../assets/images/calendar.svg" alt="">
+                            <select class="form-select" formControlName="time">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 ctm-field">
+                            <img src="../../assets/images/car.svg" alt="">
+                            <div class="ctm-dropdown">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false" >
+                                        Size of Car
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li *ngFor="let car of carInfo">
+                                            <a class="dropdown-item" href="javascript:void(0)" (click)="selectCarType(car.carType)">
+                                                <div class="vehical-item">
+                                                    <img src="{{car.carImg}}" alt="">
+                                                    <span>{{car.carType}}</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="ctm-btn" >Continue</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tierService-section section">
+    <div class="container">
+        <h2 class="text-center">We Provide Car <br>Shipping with top-tier Service</h2>
+        <p class="text-center">Car Transport delivers on-time, reliable, car shipping and excellent customer service</p>
+        <div class="card-wrapper">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card-item">
+                        <div class="card-title">Stephanie C.
+                            <span>
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                            </span>
+                        </div>
+                        <div class="card-body">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</div>
+                        <div class="card-footer">December 10, 2022</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-item">
+                        <div class="card-title">Phanie Seron
+                            <span>
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                            </span>
+                        </div>
+                        <div class="card-body">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</div>
+                        <div class="card-footer">December 10, 2022</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-item">
+                        <div class="card-title">Tephan Prekna.
+                            <span>
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.png" alt="">
+                            </span>
+                        </div>
+                        <div class="card-body">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</div>
+                        <div class="card-footer">December 10, 2022</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="step-section carBgLight section">
+    <div class="container">
+        <div class="row row align-items-end mb-5">
+            <div class="col-md-6">
+                <h2 class="m-0">3 Steps to Book with <br>an Auto Transport Company</h2>
+            </div>
+            <div class="col-md-6">
+                <p class="m-0">Get a quote and book your order. We handle the rest.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card-item">
+                    <div class="card-icon">
+                        <img src="../../assets/images/choices.svg" alt="" srcset="">
+                    </div>
+                    <div class="card-title">1-Book your order</div>
+                    <div class="card-body">Instantly schedule your order with the best car transportation company
+                        around.</div>
+                    <div class="card-footer">December 10, 2022</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-item">
+                    <div class="card-icon">
+                        <img src="../../assets/images/carrier.svg" alt="" srcset="">
+                    </div>
+                    <div class="card-title">2-We pick up your vehicle</div>
+                    <div class="card-body">Our professional auto transport team will meet you at a pickup spot of your
+                        choosing.</div>
+                    <div class="card-footer">December 10, 2022</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-item">
+                    <div class="card-icon">
+                        <img src="../../assets/images/person.svg" alt="" srcset="">
+                    </div>
+                    <div class="card-title">3. You receive your vehicle</div>
+                    <div class="card-body">We're the best auto movers for a reason. We get things done with no fuss and
+                        no stress.</div>
+                    <div class="card-footer">December 10, 2022</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="quote-section section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="m-0">Want to know the cost <br>
+                    of Shipping a Car with us?</h2>
+            </div>
+            <div class="col-md-6">
+                <div class="quote-btn-wrapper">
+                    <div class="ctmOrange-btn">Get an instant quote</div>
+                    <div class="ctmOrangeTrans-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                            <path
+                                d="M8.82104 14.1908C10.884 16.2386 13.2718 18.1948 14.2092 17.2503C15.5515 15.8982 16.3777 14.7219 19.3561 17.0972C22.3346 19.4737 20.0599 21.0731 18.7599 22.3832C17.2597 23.8947 11.6409 22.4891 6.07143 16.9619C0.502313 11.4336 -0.946186 5.82573 0.555082 4.31349C1.85547 3.00328 3.43778 0.717235 5.83502 3.67837C8.23343 6.638 7.06341 7.47322 5.72117 8.82566C4.78418 9.76986 6.75777 12.1426 8.82104 14.1908ZM11.8124 4.4213C11.8124 4.4213 11.1901 4.32407 10.7543 4.76014C10.3058 5.20868 10.2862 5.98138 10.7589 6.45364C11.0382 6.73295 11.4321 6.79249 11.4321 6.79249C12.1999 6.93649 13.3571 7.18033 14.5885 8.41138C15.8195 9.64237 16.0634 10.7995 16.2074 11.5677C16.2074 11.5677 16.2669 11.9616 16.5462 12.2409C17.0185 12.7133 17.7912 12.694 18.2397 12.2455C18.6755 11.8098 18.5786 11.1875 18.5786 11.1875C18.3347 9.63228 17.5809 8.00774 16.2865 6.71339C14.9917 5.41904 13.3671 4.66552 11.8124 4.4213ZM17.6498 5.35003C19.9068 7.60709 20.8691 10.1687 20.5559 12.2444C20.5559 12.2444 20.4466 12.9017 20.8759 13.331C21.3591 13.8143 22.125 13.7864 22.5773 13.3345C22.8679 13.0438 22.9312 12.5708 22.9312 12.5708C23.1902 10.777 22.8645 7.16836 19.3478 3.65204C15.8311 0.135662 12.2228 -0.18999 10.429 0.0685918C10.429 0.0685918 9.95636 0.13156 9.66535 0.422513C9.21304 0.874823 9.18555 1.64076 9.66873 2.12394C10.0981 2.5533 10.7554 2.44394 10.7554 2.44394C12.8312 2.1307 15.3927 3.09302 17.6498 5.35003Z"
+                                fill="#FC684E" />
+                        </svg>
+                        (122)-236-5365
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="transport-service-section section">
+    <div class="container">
+        <h2 class="text-center">We Provide a car Transport <br>Service you can rely on</h2>
+        <p class="text-center">Car Transport delivers on-time, reliable, car shipping and excellent customer service</p>
+        <div class="card-wrapper">
+            <div class="row grid-gap">
+                <div class="col-md-4">
+                    <div class="card-item">
+                        <div class="card-icon">
+                            <img src="../../assets/images/payment.png" alt="">
+                        </div>
+                        <div class="card-title">Zero upfront payment</div>
+                        <div class="card-body">But I must explain to you how all this mistaken idea of denouncing
+                            pleasure and praising pain was born and I will give you a complete.</div>
+                        <div class="card-footer">December 10, 2022</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-item">
+                        <div class="card-icon">
+                            <img src="../../assets/images/trust.png" alt="">
+                        </div>
+                        <div class="card-title">Transport service trusted</div>
+                        <div class="card-body">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</div>
+                        <div class="card-footer">December 10, 2022</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-item">
+                        <div class="card-icon">
+                            <img src="../../assets/images/health-insurance.png" alt="">
+                        </div>
+                        <div class="card-title">Full Insurance Coverage</div>
+                        <div class="card-body">But I must explain to you how all this mistaken idea of denouncing
+                            pleasure and praising pain was born and I will give you a complete.</div>
+                        <div class="card-footer">December 10, 2022</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-item">
+                        <div class="card-icon">
+                            <img src="../../assets/images/customize.png" alt="">
+                        </div>
+                        <div class="card-title">Fully customizable</div>
+                        <div class="card-body">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque.</div>
+                        <div class="card-footer">December 10, 2022</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-item">
+                        <div class="card-icon">
+                            <img src="../../assets/images/man.png" alt="">
+                        </div>
+                        <div class="card-title">Personally Coordinated</div>
+                        <div class="card-body">But I must explain to you how all this mistaken idea of denouncing
+                            pleasure and praising pain was born and I will give you a complete.</div>
+                        <div class="card-footer">December 10, 2022</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-item">
+                        <div class="card-icon">
+                            <img src="../../assets/images/headphones.png" alt="">
+                        </div>
+                        <div class="card-title">24/7 Customer Support</div>
+                        <div class="card-body">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</div>
+                        <div class="card-footer">December 10, 2022</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center mt-5">
+            <div class="col-md-6">
+                <img src="../../assets/images/car_transport.png" alt="">
+            </div>
+            <div class="col-md-6">
+                <div class="transContent">
+                    <h2>Professional Auto Transport Company Car Delivery To Your Front Door.</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                        deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                        provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
+                        dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                        soluta nobis est eligendi optio cumque nihil impedit quo minus id quod</p>
+                    <a href="javascript:void(0)" class="ctm-btn">Car shipping cost information</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="frequentlyquestions-section section">
+    <div class="container">
+        <div class="row align-items-center mt-5">
+            <div class="col-md-6">
+                <div class="transContent">
+                    <h2>Frequently asked questions</h2>
+                    <div class="qns-wrapper">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        How do I order?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the first item's accordion body.</strong> It is shown by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Can I put personal items in the car?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the second item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        When will my vehicle be delivered?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        When will my vehicle be delivered?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        When will my vehicle be delivered?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the third item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="../../assets/images/truck_tranport.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="latest-stories-section section">
+    <div class="container">
+        <h2>Latest Stories for you</h2>
+        <div class="story-wrapper">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="story-item">
+                        <div class="s-img">
+                            <img src="../../assets/images/story1.png" alt="">
+                        </div>
+                        <div class="s-title">The Ultimate Solution for Your Car Shipping Needs</div>
+                        <div class="s-desc">But I must explain to you how all this mistaken idea of denouncing pleasure
+                            and praising pain.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="story-item">
+                        <div class="s-img">
+                            <img src="../../assets/images/story2.png" alt="">
+                        </div>
+                        <div class="s-title">The essential guide to nebraska auto transport</div>
+                        <div class="s-desc">But I must explain to you how all this mistaken idea of denouncing pleasure
+                            and praising pain.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="story-item">
+                        <div class="s-img">
+                            <img src="../../assets/images/story3.png" alt="">
+                        </div>
+                        <div class="s-title">What you need to know about car shipping to or from minnesota</div>
+                        <div class="s-desc">But I must explain to you how all this mistaken idea of denouncing pleasure
+                            and praising pain.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+    <form (submit)="sendEmail()" [formGroup]="mailForm">
+        <div class="form-group mb-3">
+            <label for="exampleInputEmail1">from_name</label>
+            <input type="text" class="form-control" formControlName="from_name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group mb-3">
+            <label for="exampleInputEmail1">to_name</label>
+            <input type="text" class="form-control" formControlName="to_name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group mb-3">
+            <label for="exampleInputPassword1">from_email</label>
+            <input type="email" class="form-control" formControlName="from_email" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group mb-3">
+            <label for="exampleInputEmail1">subject</label>
+            <input type="text" class="form-control" formControlName="subject" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group mb-3">
+            <label for="exampleInputEmail1">reply_to</label>
+            <input type="text" class="form-control" formControlName="reply_to" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group mb-3">
+            <label for="exampleInputEmail1">message</label>
+            <textarea class="form-control" formControlName="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
+  
+  <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button>
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+   -->

@@ -1,0 +1,66 @@
+<section class="vehicle-details-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="ctm-form">
+                    <div class="form-title">
+                        <h2>Fill the Form</h2>
+                    </div>
+                    <form [formGroup]="vehicleBooking" (ngSubmit)="bookingVehicle()">
+                        <div class="mb-3 ctm-field">
+                            <img src="../../assets/images/mail.svg" alt="">
+                            <input type="text" class="form-control" placeholder="Johnsarika678@gmail.com" formControlName="email">
+                        </div>
+                        <div class="mb-3 ctm-field">
+                            <img src="../../assets/images/phone.svg" alt="">
+                            <input type="text" class="form-control" placeholder="(223)-456-7899" formControlName="phoneNo">
+                        </div>
+                        <div class="mb-3 ctm-field">
+                            <img src="../../assets/images/year.svg" alt="">
+                            <input type="text" class="form-control" placeholder="Enter Year" formControlName="year">
+                        </div>
+                        <div class="mb-3 ctm-field">
+                            <img src="../../assets/images/point.svg" alt="">
+                            <input type="text" class="form-control" placeholder="Enter Make" formControlName="make">
+                        </div>
+                        <div class="mb-3 ctm-field">
+                            <img src="../../assets/images/carmodel.svg" alt="">
+                            <input type="text" class="form-control" placeholder="Enter Make" formControlName="model">
+                        </div>
+                        <button type="submit" class="ctm-btn">Continue</button>
+                        <div class="mb-3 ctm-field">
+                            <p>By providing your phone number or e-mail address, you agree to receive automated promotional messages and authorize us to make or initiate sales calls to that phone number or email address. This agreement isn't a condition of any purchase of any products, goods or services. ‘The Terms & Condition and the Privacy Policy can be found at nexusautotransport.com. Msg & data rates may apply.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="ctm-form sm-form">
+                    <div class="form-title disable">
+                        <h2>Route details</h2>
+                        <p><a href="javascript:void(0)" routerLink="/home"><img src="../../assets/images/pencil.svg" alt="">Edit</a></p>
+                    </div>
+                    <div class="diableField-wrapper">
+                        <div class="field">
+                            <span><img src="../../assets/images/location-from.svg" alt=""> From</span>
+                            <h2>{{carRoute.from_locaton}}</h2>
+                        </div>
+                        <div class="field">
+                            <span><img src="../../assets/images/location-to.svg" alt=""> To</span>
+                            <h2>{{carRoute.to_locaton}}</h2>
+                        </div>
+                        <div class="field">
+                            <span><img src="../../assets/images/calendar.svg" alt=""> Within 7 days</span>
+                            <h2>{{carRoute.time}}</h2>
+                        </div>
+                        <div class="field">
+                            <span><img src="../../assets/images/car.svg" alt=""> Vehicle</span>
+                            <h2>{{carRoute.cartype}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

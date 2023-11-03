@@ -1,0 +1,35 @@
+.ctm-dropdown .dropdown button {
+    background: #fff;
+    border: navajowhite;
+    color: #000;
+    width: 100%;
+    text-align: left;
+    padding-left: 60PX;
+}
+
+.ctm-dropdown .dropdown-menu.show {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border: none;
+    padding: 5px;
+}
+.vehical-item{
+    border: 1px solid #ccc;
+    padding: 7px;
+    border-radius: 5px;
+}
+.vehical-item img {
+    width: 60px;
+    position: static;
+    margin-bottom: 4px;
+}
+
+.vehical-item span {
+    display: block;
+    font-size: 13px;
+}
+
+.ctm-dropdown .dropdown-item {
+    padding: 2px;
+}
