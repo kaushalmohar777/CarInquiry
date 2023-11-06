@@ -1,3 +1,31 @@
+<section>
+    <div class="container">
+      <div class="stepper-wrapper">
+        <ul>
+          <li>
+            <div class="stepper-item">
+              <div class="circle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                </svg>
+              </div>
+              <div class="content">Select a Route</div>
+            </div>
+          </li>
+          <li>
+            <div class="stepper-item">
+              <div class="circle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                    <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                </svg>
+              </div>
+              <div class="content">Finish</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 <section class="vehicle-details-section">
     <div class="container">
         <div class="row">
@@ -10,22 +38,30 @@
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/mail.svg" alt="">
                             <input type="text" class="form-control" placeholder="Johnsarika678@gmail.com" formControlName="email">
+                            <span class="error-msg" *ngIf="vehicleBooking.get('email')?.pristine  && vehicleBooking.get('email')?.touched">This field is required</span>
+                            <span class="error-msg" *ngIf="vehicleBooking.get('email')?.invalid && vehicleBooking.get('email')?.touched && vehicleBooking.get('email')?.dirty">Please Valid Email</span>
                         </div>
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/phone.svg" alt="">
                             <input type="text" class="form-control" placeholder="(223)-456-7899" formControlName="phoneNo">
+                            <span class="error-msg" *ngIf="vehicleBooking.get('phoneNo')?.pristine && vehicleBooking.get('phoneNo')?.touched">This field is required</span>
+                            <span class="error-msg" *ngIf="vehicleBooking.get('phoneNo')?.invalid && vehicleBooking.get('phoneNo')?.touched && vehicleBooking.get('phoneNo')?.dirty">Please Enter 10 Digit NO.</span>
                         </div>
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/year.svg" alt="">
                             <input type="text" class="form-control" placeholder="Enter Year" formControlName="year">
+                            <span class="error-msg" *ngIf="vehicleBooking.get('year')?.pristine && vehicleBooking.get('year')?.touched">This field is required</span>
+                            <span class="error-msg" *ngIf="vehicleBooking.get('year')?.invalid && vehicleBooking.get('year')?.touched && vehicleBooking.get('year')?.dirty">Please Enter 4 Digit Valid Year.</span>
                         </div>
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/point.svg" alt="">
                             <input type="text" class="form-control" placeholder="Enter Make" formControlName="make">
+                            <span class="error-msg" *ngIf="vehicleBooking.get('make')?.invalid && vehicleBooking.get('make')?.touched">This field is required</span>
                         </div>
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/carmodel.svg" alt="">
                             <input type="text" class="form-control" placeholder="Enter Make" formControlName="model">
+                            <span class="error-msg" *ngIf="vehicleBooking.get('model')?.invalid && vehicleBooking.get('model')?.touched">This field is required</span>
                         </div>
                         <button type="submit" class="ctm-btn">Continue</button>
                         <div class="mb-3 ctm-field">

@@ -23,9 +23,9 @@ export class VehicleDetailsComponent implements OnInit {
     cartype: ''
   }
   vehicleBooking = new FormGroup({
-    email: new FormControl(null, Validators.required),
-    phoneNo: new FormControl(null, Validators.required),
-    year: new FormControl(null, Validators.required),
+    email: new FormControl(null, [Validators.required, Validators.email]),
+    phoneNo: new FormControl(null, [Validators.required, Validators.pattern("[0-9 ]{10}")]),
+    year: new FormControl(null, [Validators.required, Validators.pattern("[0-9 ]{4}")]),
     make: new FormControl(null, Validators.required),
     model: new FormControl(null, Validators.required),
   });
@@ -46,8 +46,11 @@ export class VehicleDetailsComponent implements OnInit {
         time: this.carRoute.time,
         cartype: this.carRoute.carType
       }).then((res) => console.log("success", res)).catch((err) => console.log("field", err))
-      alert("message has been send")
+      // alert("message has been send")
       this.router.navigate(['Successful'])
+    }
+     if(this.vehicleBooking.valid && this.carRoute.from_locaton == undefined){
+      alert("Plaese fill Route details")
     }
   }
 }

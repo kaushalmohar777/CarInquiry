@@ -119,6 +119,19 @@ section p {
 .ctm-field {
     position: relative;
 }
+.ctm-field .form-control:focus,
+.ctm-form .form-select:focus{
+    box-shadow: none;
+}
+.error-msg {
+    color: #ff1313;
+    font-size: 14px;
+    margin-top: 5px;
+    display: inline-block;
+}
+input.ng-touched.ng-invalid {
+    box-shadow: 0px 0px 7px -3px #ff1313;
+}
 .ctm-field img {
     width: 23px;
     position: absolute;

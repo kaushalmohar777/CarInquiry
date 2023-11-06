@@ -1,0 +1,45 @@
+.stepper-wrapper ul {
+    display: flex;
+  }
+  .stepper-wrapper ul li {
+    margin-right: 115px;
+    position: relative;
+  }
+  .stepper-wrapper ul li:last-child{
+    margin-right: 0;
+  }
+  .stepper-wrapper {
+    width: 310px;
+    margin: 50px auto;
+}
+.stepper-wrapper svg {
+    color: #fff;
+}
+  .stepper-wrapper ul li::after {
+    content: "";
+    position: absolute;
+    right: -100px;
+    width: 100%;
+    height: 5px;
+    background: #E0E0E0;
+    top: 33%;
+    border-radius: 10px;
+  }
+  .stepper-wrapper ul li:last-child::after{
+    content: none;
+  }
+  .stepper-wrapper .circle {
+    width: 70px;
+    height: 70px;
+    background: #E0E0E0;
+    border-radius: 50%;
+    padding: 12px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .stepper-wrapper ul li:first-child .circle{
+    background: #4BAE4F;
+  }
+  .stepper-wrapper .content {
+    text-align: center;
+  }

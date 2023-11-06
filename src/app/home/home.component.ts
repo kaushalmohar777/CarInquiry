@@ -39,7 +39,11 @@ export class HomeComponent {
     }
     console.log(this.mailForm.valid)
   }
+  // car_type:any;;
+  carSize:any
   selectCarType(carType:string){
-    this.mailForm.get('cartype')?.setValue(carType)
+    this.mailForm.get('cartype')?.setValue(carType) 
+    this.carSize = carType
+    console.log(carType)
   }
 }

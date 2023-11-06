@@ -14,10 +14,12 @@
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/location-from.svg" alt="">
                             <input type="text" class="form-control" placeholder="Kalida, OH" formControlName="from_locaton">
+                            <span class="error-msg" *ngIf="mailForm.get('from_locaton')?.invalid && mailForm.get('from_locaton')?.touched">This field is required</span>
                         </div>
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/location-to.svg" alt="">
                             <input type="text" class="form-control" placeholder="Harned, KY" formControlName="to_locaton">
+                            <span class="error-msg" *ngIf="mailForm.get('to_locaton')?.invalid && mailForm.get('to_locaton')?.touched">This field is required</span>
                         </div>
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/calendar.svg" alt="">
@@ -27,14 +29,15 @@
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
                             </select>
+                            <span class="error-msg" *ngIf="mailForm.get('time')?.invalid && mailForm.get('time')?.touched">This field is required</span>
                         </div>
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/car.svg" alt="">
                             <div class="ctm-dropdown">
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false" >
-                                        Size of Car
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{carSize ? carSize : 'Size of Car'}}
                                     </button>
                                     <ul class="dropdown-menu">
                                         <li *ngFor="let car of carInfo">
@@ -48,7 +51,8 @@
                                         
                                     </ul>
                                 </div>
-                            </div>
+                            <!-- <span class="error-msg" *ngIf="car_type">This field is required</span> -->
+                        </div>
                         </div>
                         <button type="submit" class="ctm-btn" >Continue</button>
                     </form>
