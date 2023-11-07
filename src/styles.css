@@ -18,6 +18,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --border-color-- : #E0E0E0;
     --bgLight-color-- : #F5F7FA;
     --carOrang-color-- : #FC684E;
+    --carGreen-color-- : #4BAE4F;
 }
 ul{
     padding: 0;
@@ -28,6 +29,7 @@ li{
 }
 a{
     text-decoration: none;
+    color: inherit;
 }
 img{
     width: 100%;
@@ -77,13 +79,6 @@ section p {
     border-radius: 5px;
     font-weight: 500;
 }
-.form-title .ctm-btn {
-    background: var(--carSecondery-color--);
-    padding: 8px 10px;
-    border: none;
-    width: 100%;
-    color: #fff;
-}
 .card-item{
     border: 1px solid var(--border-color--);
     padding: 40px;
@@ -115,6 +110,93 @@ section p {
     font-weight: 300;
     color: var(--carSeconderyLight-color--);
 }
+
+/* form section css start=============== */
+.ctm-form {
+    background: var(--formBg-color--);
+    padding: 37px 60px;
+}
+.ctm-field {
+    position: relative;
+    min-height: 81px;
+}
+.ctm-field .form-control:focus,
+.ctm-form .form-select:focus{
+    box-shadow: none;
+}
+.error-msg {
+    color: #ff1313;
+    font-size: 14px;
+    margin-top: 5px;
+    display: inline-block;
+}
+input.ng-touched.ng-invalid {
+    box-shadow: 0px 0px 7px -3px #ff1313;
+}
+.ctm-field img {
+    width: 23px;
+    position: absolute;
+    left: 12px;
+    top: 16px;
+    z-index: 1;
+}
+.ctm-field p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 30px;
+}
+.disable{
+    display: flex;
+    justify-content: space-between;
+}
+.form-title h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+.form-title p {
+    color: #4BAE4F;
+    font-size: 20px;
+    font-weight: 400;
+}
+.form-title img {
+    width: 24px;
+    margin-right: 5px;
+}
+.ctm-form.sm-form{
+    max-width: 450px;
+    margin-left: auto;
+}
+.ctm-form .form-control,
+.ctm-form .form-select {
+    border: none;
+    border-radius: 0;
+    padding: 15px 56px;
+}
+form .ctm-btn {
+    background: var(--carOrang-color--);
+    padding: 8px 10px;
+    border: none;
+    width: 100%;
+    color: #fff;
+}
+
+.field {
+    background: var(--carWhite-color--);
+    padding: 32px;
+    margin-bottom: 15px;
+}
+.field h2 {
+    margin: 0;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.field img {
+    width: 22px;
+    margin-right: 5px;
+}
+/* form section css end=============== */
+
 /* banner section css start============== */
 .banner-section{
     background: url(../src/assets/images/banner-img.png) center no-repeat;
@@ -132,17 +214,7 @@ section p {
     font-weight: 700;
 }
 
-.banner-from {
-    background: var(--formBg-color--);
-    padding: 37px 60px;
-    max-width: 450px;
-    margin-left: auto;
-}
-.banner-from .form-control,
-.banner-from .form-select {
-    border: none;
-    border-radius: 0;
-}
+
 /* banner section css end============== */
 
 /* step-section section css start=================== */
@@ -186,10 +258,110 @@ section p {
 }
 /* transport-service-section css end============ */
 
+/* renking-section css start===================== */
+.ranking-items {
+    border: 1px solid #cccc;
+    padding: 19px;
+    border-radius: 5px;
+}
+.ranking-items h3 {
+    font-size: 48px;
+    color: var(--carSecondery-color--);
+}
+.ranking-items p {
+    margin-bottom: 10px;
+}
+.ranking-items img {
+    width: 18px;
+}
+.ranking-items span {
+    color: var(--carSeconderyLight-color--);
+}
+.ranking-items .rankLogo {
+    width: 60px;
+}
+
+/* renking-section css end===================== */
+
+/* exprience-section css start=================== */
+section.exprience-section::before {
+    content: "";
+    background: url(../src/assets/images/expricrRaqtangle.png) center no-repeat;
+    position: absolute;
+    bottom: -26%;
+    width: 100%;
+    height: 28%;
+    left: 0;
+    right: 0;
+}
+.exprience-section{
+    background: var(--carPrimary-color--);
+    padding-top: 110px;
+    color: var(--carWhite-color--);
+    position: relative;
+    margin-bottom: 15%;
+}
+.exprience-section .content {
+    text-align: center;
+}
+.exprience-section .content h3 {
+    font-size: 80px;
+    font-weight: 600;
+}
+.exprience-section .content p {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--carWhite-color--);
+}
+.content img {
+    width: 70px;
+}
+.exprience-section .circle-img {
+    width: 100px;
+}
+.circle1 {
+    border: 1px solid #2a3a58;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.circle2 {
+    border: 1px solid #4a566e;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle3 {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* exprience-section css start=================== */
+
 /* frequentlyquestions-section css start ============== */
 .qns-wrapper {
     height: 400px;
 }
+/* .qns-wrapper .accordion-button:focus,
+.qns-wrapper .accordion-button:not(.collapsed)
+.qns-wrapper .accordion-button:hover{
+    background: var(--carPrimary-color--);
+    color: var(--carWhite-color--);
+} */
+
+
 /* frequentlyquestions-section css end ============== */
 
 /* latest-stories-section css start============= */
