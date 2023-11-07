@@ -5,8 +5,8 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { SuccessfulComponent } from './successful/successful.component';
 
 const routes: Routes = [
-  {path:'', pathMatch:'full', redirectTo:'home'},
-  {path:'home', component:HomeComponent},
+  {path:'', component:HomeComponent},
+  // {path:'home', component:HomeComponent},
   {path:'vehicleDetails', component:VehicleDetailsComponent},
   {path:'Successful', component:SuccessfulComponent}
 ];

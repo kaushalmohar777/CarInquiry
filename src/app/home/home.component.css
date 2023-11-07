@@ -41,3 +41,16 @@
 .ctm-dropdown ul li {
     width: 25%;
 }
+
+input[type="date"]{
+    position: relative;
+}
+::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    border-radius: 3px;
+    position: absolute;
+    left: 11px;
+    z-index: 1;
+    width: 100%;
+    opacity: 0.1;
+}

@@ -6,9 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class RouteDetailService {
 
-  constructor() { 
-    console.log(this.carRoute)
-  }
+  constructor() { }
   carRoute = new BehaviorSubject({});
   // carRoute = new BehaviorSubject({from_locaton:'', to_locaton:'', time:'', carType:''});
 }

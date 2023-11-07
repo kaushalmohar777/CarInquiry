@@ -19,3 +19,23 @@ header .navbar-nav .nav-link.ctm-btn {
     border-radius: 4px;
     color: var(--carWhite-color--);
 }
+
+header .nav-item a {
+    position: relative;
+}
+header .nav-item a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background: var(--carPrimary-color--);
+    left: 0;
+    bottom: 0px;
+    border-radius: 4px;
+    transition: ease 0.3s;
+}
+
+header .nav-item a.active::after,
+header .nav-item a:hover::after{
+    width: 100%;
+}

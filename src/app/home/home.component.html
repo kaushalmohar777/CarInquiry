@@ -1,6 +1,6 @@
-<section class="banner-section section">
+<section class="banner-section section" id="banner">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-md-6">
                 <h1>Car Transport made Quick, Safe, & Affordable</h1>
                 <h3>This Auto Transport is the number one rated car transporter in the U.S.</h3>
@@ -13,7 +13,7 @@
                     <form [formGroup]="mailForm" (submit)="send()">
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/location-from.svg" alt="">
-                            <input type="text" class="form-control" placeholder="Kalida, OH"
+                            <input type="text" class="form-control" placeholder="From"
                                 formControlName="from_locaton">
                             <span class="error-msg"
                                 *ngIf="mailForm.get('from_locaton')?.invalid && mailForm.get('from_locaton')?.touched">This
@@ -21,7 +21,7 @@
                         </div>
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/location-to.svg" alt="">
-                            <input type="text" class="form-control" placeholder="Harned, KY"
+                            <input type="text" class="form-control" placeholder="To"
                                 formControlName="to_locaton">
                             <span class="error-msg"
                                 *ngIf="mailForm.get('to_locaton')?.invalid && mailForm.get('to_locaton')?.touched">This
@@ -29,12 +29,7 @@
                         </div>
                         <div class="mb-3 ctm-field">
                             <img src="../../assets/images/calendar.svg" alt="">
-                            <select class="form-select" formControlName="time">
-                                <option selected>Open this select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                            <input type="date" class="form-control" formControlName="time">
                             <span class="error-msg"
                                 *ngIf="mailForm.get('time')?.invalid && mailForm.get('time')?.touched">This field is
                                 required</span>
@@ -184,8 +179,8 @@
             </div>
             <div class="col-md-6">
                 <div class="quote-btn-wrapper">
-                    <a href="javascript:void(0)" class="ctmOrange-btn">Get an instant quote</a>
-                    <a href="javascript:void(0)" class="ctmOrangeTrans-btn">
+                    <a href="javascript:void(0)" class="ctmOrange-btn" (click)="gotoTop()">Get an instant quote</a>
+                    <a href="tel:+916589754562" class="ctmOrangeTrans-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
                             <path
                                 d="M8.82104 14.1908C10.884 16.2386 13.2718 18.1948 14.2092 17.2503C15.5515 15.8982 16.3777 14.7219 19.3561 17.0972C22.3346 19.4737 20.0599 21.0731 18.7599 22.3832C17.2597 23.8947 11.6409 22.4891 6.07143 16.9619C0.502313 11.4336 -0.946186 5.82573 0.555082 4.31349C1.85547 3.00328 3.43778 0.717235 5.83502 3.67837C8.23343 6.638 7.06341 7.47322 5.72117 8.82566C4.78418 9.76986 6.75777 12.1426 8.82104 14.1908ZM11.8124 4.4213C11.8124 4.4213 11.1901 4.32407 10.7543 4.76014C10.3058 5.20868 10.2862 5.98138 10.7589 6.45364C11.0382 6.73295 11.4321 6.79249 11.4321 6.79249C12.1999 6.93649 13.3571 7.18033 14.5885 8.41138C15.8195 9.64237 16.0634 10.7995 16.2074 11.5677C16.2074 11.5677 16.2669 11.9616 16.5462 12.2409C17.0185 12.7133 17.7912 12.694 18.2397 12.2455C18.6755 11.8098 18.5786 11.1875 18.5786 11.1875C18.3347 9.63228 17.5809 8.00774 16.2865 6.71339C14.9917 5.41904 13.3671 4.66552 11.8124 4.4213ZM17.6498 5.35003C19.9068 7.60709 20.8691 10.1687 20.5559 12.2444C20.5559 12.2444 20.4466 12.9017 20.8759 13.331C21.3591 13.8143 22.125 13.7864 22.5773 13.3345C22.8679 13.0438 22.9312 12.5708 22.9312 12.5708C23.1902 10.777 22.8645 7.16836 19.3478 3.65204C15.8311 0.135662 12.2228 -0.18999 10.429 0.0685918C10.429 0.0685918 9.95636 0.13156 9.66535 0.422513C9.21304 0.874823 9.18555 1.64076 9.66873 2.12394C10.0981 2.5533 10.7554 2.44394 10.7554 2.44394C12.8312 2.1307 15.3927 3.09302 17.6498 5.35003Z"
@@ -284,7 +279,7 @@
                         provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
                         dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
                         soluta nobis est eligendi optio cumque nihil impedit quo minus id quod</p>
-                    <a href="javascript:void(0)" class="ctm-btn">Car shipping cost information</a>
+                    <a href="javascript:void(0)" class="ctm-btn" (click)="gotoTop()">Car shipping cost information</a>
                 </div>
             </div>
         </div>
@@ -300,7 +295,7 @@
             </div>
             <div class="col-md-4">
                 <div class="content">
-                    <h3>10,000</h3>
+                    <h3>{{customers}} +</h3>
                     <p>Satisfied customers</p>
                 </div>
             </div>
@@ -311,8 +306,8 @@
             </div>
             <div class="col-md-4">
                 <div class="content">
-                    <h3>10,000</h3>
-                    <p>Satisfied customers</p>
+                    <h3>{{Vehicles}} +</h3>
+                    <p>Vehicles delivered</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -328,8 +323,8 @@
             </div>
             <div class="col-md-4">
                 <div class="content">
-                    <h3>10,000</h3>
-                    <p>Satisfied customers</p>
+                    <h3>{{year}} + Years</h3>
+                    <p>Experience</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -337,10 +332,10 @@
                     <img src="../../assets/images/Objects3.svg" alt="" srcset="">
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 mt-5">
                 <div class="content">
-                    <h3>10,000</h3>
-                    <p>Satisfied customers</p>
+                    <h3>{{drivers}} +</h3>
+                    <p>Drivers</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -562,7 +557,7 @@
         </div>
     </div>
 </section>
-<section class="latest-stories-section section">
+<!-- <section class="latest-stories-section section">
     <div class="container">
         <h2>Latest Stories for you</h2>
         <div class="story-wrapper">
@@ -600,88 +595,4 @@
             </div>
         </div>
     </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="container">
-    <form (submit)="sendEmail()" [formGroup]="mailForm">
-        <div class="form-group mb-3">
-            <label for="exampleInputEmail1">from_name</label>
-            <input type="text" class="form-control" formControlName="from_name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
-        <div class="form-group mb-3">
-            <label for="exampleInputEmail1">to_name</label>
-            <input type="text" class="form-control" formControlName="to_name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
-        <div class="form-group mb-3">
-            <label for="exampleInputPassword1">from_email</label>
-            <input type="email" class="form-control" formControlName="from_email" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-group mb-3">
-            <label for="exampleInputEmail1">subject</label>
-            <input type="text" class="form-control" formControlName="subject" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
-        <div class="form-group mb-3">
-            <label for="exampleInputEmail1">reply_to</label>
-            <input type="text" class="form-control" formControlName="reply_to" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
-        <div class="form-group mb-3">
-            <label for="exampleInputEmail1">message</label>
-            <textarea class="form-control" formControlName="message" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
-  
-  
-  <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-  </button>
-  <mat-stepper [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>Fill out your name</ng-template>
-        <mat-form-field>
-          <mat-label>Name</mat-label>
-          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-      <form [formGroup]="secondFormGroup">
-        <mat-form-field>
-          <mat-label>Address</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                 required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-    <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-      <p>You are now done.</p>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
-      </div>
-    </mat-step>
-  </mat-stepper>
-   -->
+</section> -->

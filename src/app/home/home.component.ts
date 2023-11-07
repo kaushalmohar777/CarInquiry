@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { RouteDetailService } from '../route-detail.service';
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
   carInfo:any = [
     {carType:"small Car", carImg:'../../assets/images/carType/smallCar.svg'},
     {carType:"Midsize Car", carImg:'../../assets/images/carType/midsizeCar.svg'},
@@ -25,7 +25,9 @@ export class HomeComponent {
     {carType:"Fullsize Van", carImg:'../../assets/images/carType/fullsizeVan.svg'}
   ]
   constructor(private _carRoute:RouteDetailService, private router:Router) { }
-
+  ngOnInit(): void {
+    this.counter();
+  }
 
   mailForm = new FormGroup({
     from_locaton: new FormControl(null, Validators.required),
@@ -46,5 +48,59 @@ export class HomeComponent {
     this.mailForm.get('cartype')?.setValue(carType) 
     this.carSize = carType
     console.log(carType)
+  }
+
+
+  // window scrolling function start==============
+  // isShow: boolean = false;
+  // topPosToStartShowing = 100;
+  // @HostListener('window:scroll')
+  // checkScroll() {
+  //   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  //   console.log('[scroll]', scrollPosition);
+  //   if (scrollPosition >= this.topPosToStartShowing) {
+  //     this.isShow = true;
+  //   } else {
+  //     this.isShow = false;
+  //   }
+  // }
+  gotoTop() {
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth',
+    });
+  }
+  // window scrolling function end==============
+
+  customers:number = 1000;
+  Vehicles:number = 10000
+  year:number = 0
+  drivers:number = 0
+  counter(){
+    setInterval(()=>{
+      if(this.customers < 10000){
+        this.customers = this.customers + 25
+      }
+    }, 10)
+
+    setInterval(()=>{
+      if(this.Vehicles < 1000000){
+        this.Vehicles = this.Vehicles + 2500
+      }
+    }, 10)
+
+    setInterval(()=>{
+      if(this.drivers < 6000){
+        this.drivers = this.drivers + 250
+        console.log(this.drivers)
+      }
+    }, 100)
+
+    setInterval(()=>{
+      if(this.year < 12){
+        this.year++
+      }
+    }, 400)
   }
 }
