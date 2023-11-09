@@ -4,16 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { SuccessfulComponent } from './successful/successful.component';
+import { FaqComponent } from './faq/faq.component';
+import { TermConditionComponent } from './term-condition/term-condition.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -22,18 +21,16 @@ import { SuccessfulComponent } from './successful/successful.component';
     FooterComponent,
     HomeComponent,
     VehicleDetailsComponent,
-    SuccessfulComponent
+    SuccessfulComponent,
+    FaqComponent,
+    TermConditionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
+    CarouselModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

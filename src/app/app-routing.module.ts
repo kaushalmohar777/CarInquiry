@@ -3,12 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { SuccessfulComponent } from './successful/successful.component';
+import { FaqComponent } from './faq/faq.component';
+import { TermConditionComponent } from './term-condition/term-condition.component';
 
 const routes: Routes = [
-  {path:'', component:HomeComponent},
-  // {path:'home', component:HomeComponent},
+  {path:'', pathMatch:'full', component:HomeComponent},
   {path:'vehicleDetails', component:VehicleDetailsComponent},
-  {path:'Successful', component:SuccessfulComponent}
+  {path:'success', component:SuccessfulComponent},
+  {path:'faq', component:FaqComponent},
+  {path:'termCondition', component:TermConditionComponent}
 ];
 
 @NgModule({
@@ -16,3 +19,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+  

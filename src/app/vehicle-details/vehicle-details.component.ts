@@ -29,7 +29,7 @@ export class VehicleDetailsComponent implements OnInit {
     make: new FormControl(null, Validators.required),
     model: new FormControl(null, Validators.required),
   });
-
+  notValid:boolean = false;
   async bookingVehicle() {
     if (this.vehicleBooking.valid && this.carRoute.from_locaton !== undefined) {
       console.log(this.vehicleBooking)
@@ -47,7 +47,9 @@ export class VehicleDetailsComponent implements OnInit {
         cartype: this.carRoute.carType
       }).then((res) => console.log("success", res)).catch((err) => console.log("field", err))
       // alert("message has been send")
-      this.router.navigate(['Successful'])
+      this.router.navigate(['success'])
+    }else{
+      this.notValid = true;
     }
      if(this.vehicleBooking.valid && this.carRoute.from_locaton == undefined){
       alert("Plaese fill Route details")

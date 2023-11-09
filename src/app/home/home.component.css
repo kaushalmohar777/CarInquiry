@@ -14,6 +14,8 @@
     width: 100%;
     border: none;
     padding: 5px;
+    height: 180px;
+    overflow: auto;
 }
 .vehical-item{
     border: 1px solid #ccc;
@@ -53,4 +55,41 @@ input[type="date"]{
     z-index: 1;
     width: 100%;
     opacity: 0.1;
+}
+
+.card-title span img {
+    display: inline-block;
+    margin-right: 3px;
+    width: 16px;
+}
+
+
+
+
+.trans_wrapper {
+    position: relative;
+    margin-top: 80px;
+}
+
+.transimg {
+    position: absolute;
+    left: 0px;
+    top: 25%;
+    width: 550px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.transContent {
+    background: #b2d1ff;
+    padding: 50px;
+    padding-left: 200px;
+}
+.transimg {
+    position: absolute;
+    left: 0px;
+    top: 20%;
+    width: 550px;
+    border-radius: 5px;
+    overflow: hidden;
 }

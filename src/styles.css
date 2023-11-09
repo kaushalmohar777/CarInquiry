@@ -82,13 +82,15 @@ section p {
     border-radius: 5px;
     font-weight: 500;
 }
-.card-item{
+.card-item {
     border: 1px solid var(--border-color--);
     padding: 40px;
     border-radius: 10px;
     transition: ease 0.4s;
+    height: calc(100% - 0px);
+    min-height: 336px;
 }
-.card-item:hover {
+.card-item:hover, .ranking-items:hover {
     transform: translateY(-15px);
     box-shadow: rgba(12, 36, 83, 0.2) 0px 1px 1px, rgba(12, 36, 83, 0.2) 0px 2px 2px, rgba(12, 36, 83, 0.2) 0px 4px 4px, rgba(12, 36, 83, 0.2) 0px 8px 8px, rgba(12, 36, 83, 0.2) 0px 16px 16px;
 }
@@ -241,7 +243,46 @@ form .ctm-btn {
     height: 120px;
 }
 /* step-section section css end===================  */
+.spingCompany .card-item {
+    border: none;
+    background: var(--formBg-color--);
+}
 
+/* quality-section css start=================== */
+.quality-section{
+    background: var(--formBg-color--);
+}
+.quality-section .quality-items {
+    border: 1px solid var(--carSecondery-color--);
+    padding: 30px;
+    border-radius: 10px;
+    padding-left: 65px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.quality-items p{
+    margin: 0
+}
+.quality-section .quality-img {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #5b6573;
+    border-radius: 50%;
+    padding: 12px;
+    position: absolute;
+    left: -7%;
+    top: 25%;
+    background: #fff;
+}
+.quality.content {
+    margin-right: 70px;
+}
+.quality.content h4 {
+    font-weight: 400;
+    color: var(--carSecondery-color--);
+    margin-bottom: 40px;
+}
+/* quality-section css end=================== */
 /* quote-section css start============= */
 .quote-section{
     background: var(--carPrimary-color--);
@@ -261,9 +302,10 @@ form .ctm-btn {
     width: 70px;
     margin-bottom: 13px;
 }
-.transport-service-section .transContent{
-    padding-left: 50px;
+.transport-service-section .transContent p {
+    margin-bottom: 10px;
 }
+
 /* transport-service-section css end============ */
 
 /* renking-section css start===================== */
@@ -271,6 +313,7 @@ form .ctm-btn {
     border: 1px solid #cccc;
     padding: 19px;
     border-radius: 5px;
+    transition: ease 0.4s;
 }
 .ranking-items h3 {
     font-size: 48px;
@@ -313,11 +356,11 @@ section.exprience-section::before {
     text-align: center;
 }
 .exprience-section .content h3 {
-    font-size: 80px;
+    font-size: 40px;
     font-weight: 600;
 }
 .exprience-section .content p {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 400;
     color: var(--carWhite-color--);
 }
@@ -394,3 +437,81 @@ section.exprience-section::before {
     color: var(--carSecondery-color--);
 }
 /* latest-stories-section css end============= */
+
+/* transport-work-section css start================ */
+.transportWork-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+.transport-item {
+    width: 20%;
+    margin-right: 20px;
+    padding: 20px;
+    background: var(--carPrimary-color--);
+    color: var(--carWhite-color--);
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+    transition: ease 0.5s;
+}
+.transport-item:hover{
+    transform: translateY(-15px);
+    box-shadow: rgba(12, 36, 83, 0.2) 0px 1px 1px, rgba(12, 36, 83, 0.2) 0px 2px 2px, rgba(12, 36, 83, 0.2) 0px 4px 4px, rgba(12, 36, 83, 0.2) 0px 8px 8px, rgba(12, 36, 83, 0.2) 0px 16px 16px;
+}
+.transport-item .t-img {
+    width: 130px;
+    height: 130px;
+    padding: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background: var(--formBg-color--);
+    position: absolute;
+    top: -70px;
+    left: 23%;
+    box-shadow: rgba(12, 36, 83, 0.2) 0px 1px 1px, rgba(12, 36, 83, 0.2) 0px 2px 2px, rgba(12, 36, 83, 0.2) 0px 4px 4px, rgba(12, 36, 83, 0.2) 0px 8px 8px, rgba(12, 36, 83, 0.2) 0px 16px 16px;
+}
+.transport-item .t-content{
+    margin-top: 50px;
+}
+.t-content h3{
+    margin-bottom: 20px;
+}
+.t-content p{
+    margin: 0;
+    color: var(--carWhite-color--);
+}
+.transport-item:last-child{
+    margin-right: 0;
+}
+/* transport-work-section css end================ */
+
+/* auto-transport-section css start=================== */
+.auto-transport-section{
+    background: url(../src/assets/images/banner-img.png) center no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 200px 0;
+}
+.auto-transport-section::after{
+    content: "";
+    background: #0c245378;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.auto-t-content{
+    position: relative;
+    z-index: 1;
+}
+.auto-transport-section h2{
+    color: var(--carWhite-color--);
+}
+.auto-transport-section p{
+    color: var(--carWhite-color--);
+}
+/* auto-transport-section css end=================== */

@@ -54,3 +54,51 @@
 .stepper-wrapper .content {
   text-align: center;
 }
+
+
+
+.circles {
+  height: 450px;
+  position: relative;
+  width: 450px;
+  background: var(--carPrimary-color--);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circles > div {
+  animation: growAndFade 3s infinite ease-out;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  width: 50%;
+}
+.circles .circle1 {
+  animation-delay: 1s;
+}
+.circles .circle2 {
+  animation-delay: 2s;
+}
+.circles .circle3 {
+  animation-delay: 3s;
+}
+
+@keyframes growAndFade {
+  0% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
