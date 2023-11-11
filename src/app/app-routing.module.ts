@@ -5,13 +5,15 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { SuccessfulComponent } from './successful/successful.component';
 import { FaqComponent } from './faq/faq.component';
 import { TermConditionComponent } from './term-condition/term-condition.component';
+import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [
   {path:'', pathMatch:'full', component:HomeComponent},
   {path:'vehicleDetails', component:VehicleDetailsComponent},
   {path:'success', component:SuccessfulComponent},
   {path:'faq', component:FaqComponent},
-  {path:'termCondition', component:TermConditionComponent}
+  {path:'termCondition', component:TermConditionComponent},
+  {path:'service', component:ServicesComponent}
 ];
 
 @NgModule({

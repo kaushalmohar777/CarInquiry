@@ -1,0 +1,4 @@
+.faq-section .accordion-button:not(.collapsed){
+    background: var(--carPrimary-color--);
+    color: var(--carWhite-color--);
+}

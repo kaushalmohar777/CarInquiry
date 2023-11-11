@@ -13,6 +13,7 @@ import { SuccessfulComponent } from './successful/successful.component';
 import { FaqComponent } from './faq/faq.component';
 import { TermConditionComponent } from './term-condition/term-condition.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     VehicleDetailsComponent,
     SuccessfulComponent,
     FaqComponent,
-    TermConditionComponent
+    TermConditionComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

@@ -101,6 +101,12 @@ section p {
     font-family: Poppins;
     margin-bottom: 23px;
 }
+.card-item .card-heading {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: Poppins;
+    color: var(--carPrimary-color--);
+}
 .card-title span {
     margin-left: 30px;
     vertical-align: text-bottom;
@@ -268,7 +274,7 @@ form .ctm-btn {
     height: 90px;
     border: 1px solid #5b6573;
     border-radius: 50%;
-    padding: 12px;
+    padding: 20px;
     position: absolute;
     left: -7%;
     top: 25%;
@@ -442,7 +448,7 @@ section.exprience-section::before {
 .transportWork-wrapper {
     display: flex;
     justify-content: space-around;
-    margin-top: 80px;
+    margin-top: 110px;
 }
 .transport-item {
     width: 20%;

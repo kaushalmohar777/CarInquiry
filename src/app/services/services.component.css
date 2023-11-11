@@ -1,0 +1,27 @@
+.service-items{
+    border: 1px solid #ccc;
+    height: calc(100% - 0px);
+    border-radius:5px ;
+    overflow: hidden;
+    transition: ease 0.5s;
+}
+.service-items:hover{
+    transform: translateY(-15px);
+    box-shadow: rgba(12, 36, 83, 0.2) 0px 1px 1px, rgba(12, 36, 83, 0.2) 0px 2px 2px, rgba(12, 36, 83, 0.2) 0px 4px 4px, rgba(12, 36, 83, 0.2) 0px 8px 8px, rgba(12, 36, 83, 0.2) 0px 16px 16px;
+}
+.service-items .service-img{
+    overflow: hidden;
+}
+.service-items:hover.service-items img{
+    transition: ease 0.5s;
+}
+.service-items:hover.service-items img{
+    transform: scale(1.3);
+}
+.service-items .service-content{
+    padding: 20px;
+    margin-top: 10px;
+}
+.service-items .service-content p{
+    margin: 0;
+}

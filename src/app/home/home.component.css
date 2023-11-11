@@ -76,12 +76,10 @@ input[type="date"]{
     left: 0px;
     top: 25%;
     width: 550px;
-    border-radius: 5px;
-    overflow: hidden;
 }
 
 .transContent {
-    background: #b2d1ff;
+    background: #e2eeff;
     padding: 50px;
     padding-left: 200px;
 }
@@ -90,6 +88,14 @@ input[type="date"]{
     left: 0px;
     top: 20%;
     width: 550px;
-    border-radius: 5px;
-    overflow: hidden;
+}
+
+.transContent::after {
+    content: "";
+    background: #e2eeff;
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    right: -100px;
+    top: 0;
 }
