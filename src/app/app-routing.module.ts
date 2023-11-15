@@ -6,6 +6,7 @@ import { SuccessfulComponent } from './successful/successful.component';
 import { FaqComponent } from './faq/faq.component';
 import { TermConditionComponent } from './term-condition/term-condition.component';
 import { ServicesComponent } from './services/services.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {path:'', pathMatch:'full', component:HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path:'success', component:SuccessfulComponent},
   {path:'faq', component:FaqComponent},
   {path:'termCondition', component:TermConditionComponent},
-  {path:'service', component:ServicesComponent}
+  {path:'service', component:ServicesComponent},
+  {path:'about', component:AboutComponent}
 ];
 
 @NgModule({

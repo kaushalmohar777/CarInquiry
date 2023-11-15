@@ -1,7 +1,8 @@
 footer{
-    background: url(../../assets/images/footer_bg.png) no-repeat;
+    /* background: url(../../assets/images/footer_bg.png) no-repeat; */
     color: var(--carWhite-color--);
-    background-size: cover;
+    /* background-size: cover; */
+    background: var(--carBlack-color--);
 }
 footer p {
     font-size: 20px;
@@ -16,16 +17,16 @@ ul li{
     line-height: 35px;
 }
 .footer-logo {
-    width: 170px;
+    width: 100px;
     margin-bottom: 20px;
 }
-footer .news-cont {
+/* footer .news-cont {
     font-size: 14px;
     font-weight: 400;
     margin: 0;
-}
+} */
 .f-top{
-    padding: 130px 0;
+    padding: 90px 0;
 }
 input.f-mail {
     padding: 17px;
@@ -40,13 +41,18 @@ input.f-mail {
 input.f-mail::placeholder {
     color: #fff;
 }
-.f-btn {
+/* .f-btn {
     background: #fff;
     color: #0c2453;
     padding: 18px 35px;
     font-size: 16px;
     font-weight: 600;
     display: inline-block;
+} */
+.social {
+    width: 28px;
+    display: inline-block;
+    margin-right: 10px;
 }
 .copyright ul{
     display: flex;

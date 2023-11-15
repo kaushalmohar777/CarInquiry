@@ -65,9 +65,9 @@ export class HomeComponent implements OnInit {
     margin: 20,
     navSpeed: 700,
     autoplay:true,
-    autoplayTimeout:1000,
+    autoplayTimeout:2000,
     // autoplayHoverPause:true,
-    autoplaySpeed:900 ,
+    autoplaySpeed:1500 ,
     navText: ['', ''],
     responsive: {
       0: {
@@ -144,4 +144,37 @@ export class HomeComponent implements OnInit {
       }
     }, 400)
   }
+
+  // banner slider logic start=======================
+  bannerSlider: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: false,
+    dots: false,
+    margin: 0,
+    navSpeed: 700,
+    autoplay:true,
+    autoplayTimeout:2200,
+    // autoplayHoverPause:true,
+    autoplaySpeed:2000 ,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 1
+      }
+    },
+    nav: true
+  }
+  // banner slider logic end=======================
+
 }

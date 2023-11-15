@@ -1,3 +1,14 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+header .navbar-brand {
+    display: inline-block;
+    width: 70px;
+}
 header .navbar-nav .nav-link {
     margin: 0 10px;
     color: var(--carBlack-color--);

@@ -1,4 +1,4 @@
-.service-items{
+/* .service-items{
     border: 1px solid #ccc;
     height: calc(100% - 0px);
     border-radius:5px ;
@@ -22,6 +22,10 @@
     padding: 20px;
     margin-top: 10px;
 }
-.service-items .service-content p{
+*/
+.service-wraper .service-content p{
     margin: 0;
+}
+.s-grid-gap{
+    grid-row-gap: 70px;
 }

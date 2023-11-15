@@ -1,4 +1,108 @@
-<section class="banner-section section" id="banner">
+<section class="banner-section" id="banner">
+    <div class="banner-wrapper">
+        <owl-carousel-o [options]="bannerSlider">
+            <ng-template carouselSlide>
+                <div class="banner-slider banner-slider1">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h1>Car Transport made Quick, Safe, & Affordable</h1>
+                                <h3>This Auto Transport is the number one rated car transporter in the U.S.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="banner-slider banner-slider2">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h1>Car Transport made Quick, Safe, & Affordable</h1>
+                                <h3>This Auto Transport is the number one rated car transporter in the U.S.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template carouselSlide>
+                <div class="banner-slider banner-slider3">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h1>Car Transport made Quick, Safe, & Affordable</h1>
+                                <h3>This Auto Transport is the number one rated car transporter in the U.S.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+    <div class="formPosition">
+        <div class="ctm-form sm-form">
+            <div class="form-title">
+                <h2>Fill the Form</h2>
+            </div>
+            <form [formGroup]="mailForm" (submit)="send()">
+                <div class="mb-3 ctm-field">
+                    <img src="../../assets/images/location-from.svg" alt="">
+                    <input type="text" class="form-control" placeholder="From" formControlName="from_locaton">
+                    <span class="error-msg"
+                        *ngIf="mailForm.get('from_locaton')?.invalid && mailForm.get('from_locaton')?.touched">This
+                        field is required</span>
+                    <span class="error-msg" *ngIf="mailForm.get('from_locaton')?.pristine && notValid">This
+                        field is required</span>
+                </div>
+                <div class="mb-3 ctm-field">
+                    <img src="../../assets/images/location-to.svg" alt="">
+                    <input type="text" class="form-control" placeholder="To" formControlName="to_locaton">
+                    <span class="error-msg"
+                        *ngIf="mailForm.get('to_locaton')?.invalid && mailForm.get('to_locaton')?.touched">This
+                        field is required</span>
+                    <span class="error-msg" *ngIf="mailForm.get('to_locaton')?.pristine && notValid">This
+                        field is required</span>
+                </div>
+                <div class="mb-3 ctm-field">
+                    <img src="../../assets/images/calendar.svg" alt="">
+                    <input type="date" class="form-control" formControlName="time">
+                    <span class="error-msg"
+                        *ngIf="mailForm.get('time')?.invalid && mailForm.get('time')?.touched">This field is
+                        required</span>
+                    <span class="error-msg" *ngIf="mailForm.get('time')?.pristine && notValid">This field is
+                        required</span>
+                </div>
+                <div class="mb-3 ctm-field">
+                    <img src="../../assets/images/car.svg" alt="">
+                    <div class="ctm-dropdown">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{carSize ? carSize : 'Size of Car'}}
+                            </button>
+                            <span class="error-msg" *ngIf="carValid">This field is
+                                required</span>
+                            <ul class="dropdown-menu">
+                                <li *ngFor="let car of carInfo">
+                                    <a class="dropdown-item" href="javascript:void(0)"
+                                        (click)="selectCarType(car.carType)">
+                                        <div class="vehical-item">
+                                            <img src="{{car.carImg}}" alt="">
+                                            <span>{{car.carType}}</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="ctm-btn">Continue</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- <section class="banner-section section" id="banner">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
@@ -69,7 +173,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section class="tierService-section section spingCompany">
     <div class="container">
         <h2>Discover the advantages of booking with one of the top-rated auto shipping companies.</h2>
@@ -169,97 +273,94 @@
 <section class="tierService-section section">
     <div class="container">
         <h2 class="text-center">Our Happy Customers</h2>
-        <p class="text-center">Car Transport delivers on-time, reliable, car shipping and excellent customer service</p>
+        <!-- <p class="text-center">Car Transport delivers on-time, reliable, car shipping and excellent customer service</p> -->
         <div class="card-wrapper">
             <owl-carousel-o [options]="customOptions">
                 <ng-template carouselSlide>
                     <div class="card-item">
                         <div class="card-title">John Simmons
                             <span>
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
                             </span>
                         </div>
                         <div class="card-body">“I had a last-minute request for auto transport, and Speedyway came to
                             the rescue. They were able to accommodate my tight timeline and ensured my car was picked up
                             and delivered on time. The entire experience was hassle-free, and their customer service was
                             top-notch. Highly recommended for their reliability and efficiency!”</div>
-                        <div class="card-footer">December 10, 2022</div>
                     </div>
                 </ng-template>
                 <ng-template carouselSlide>
                     <div class="card-item">
                         <div class="card-title">Dara and James Levine
                             <span>
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
                             </span>
                         </div>
                         <div class="card-body">“ We had a great experience with Speedywayfor our vehicle transport. The
                             team was incredibly professional and provided excellent communication throughout the
                             process. Our car arrived in perfect condition and the delivery was right on schedule. Highly
                             recommended!”</div>
-                        <div class="card-footer">December 10, 2022</div>
                     </div>
                 </ng-template>
                 <ng-template carouselSlide>
                     <div class="card-item">
                         <div class="card-title">Sarah M.
                             <span>
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
                             </span>
                         </div>
                         <div class="card-body">“I was hesitant about shipping my classic car, but Speedywayput my
                             worries at ease. Their attention to detail and expertise in handling vintage vehicles was
                             impressive. The entire process was smooth, and my car arrived in pristine condition. I
                             wouldn't hesitate to use their services again.”</div>
-                        <div class="card-footer">December 10, 2022</div>
                     </div>
                 </ng-template>
                 <ng-template carouselSlide>
                     <div class="card-item">
                         <div class="card-title">Christina Watts
                             <span>
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
                             </span>
                         </div>
                         <div class="card-body">“I needed to transport my car across the country, and I'm glad I
                             choseSpeedyway. The team was friendly, responsive, and guided me through the entire process.
-                            They provided me with updates along the way, and my car arrived earlier than expected. Thank you
+                            They provided me with updates along the way, and my car arrived earlier than expected. Thank
+                            you
                             for the exceptional service!”</div>
-                        <div class="card-footer">December 10, 2022</div>
                     </div>
                 </ng-template>
                 <ng-template carouselSlide>
                     <div class="card-item">
                         <div class="card-title">David Lawson
                             <span>
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
-                                <img src="../../assets/images/star.png" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
+                                <img src="../../assets/images/star.svg" alt="">
                             </span>
                         </div>
                         <div class="card-body">“I had multiple vehicles to transport, and Speedyway handled everything
                             seamlessly. They coordinated the logistics for each vehicle and provided regular updates
-                            throughout the process. Their professionalism and attention to detail exceeded my expectations.
+                            throughout the process. Their professionalism and attention to detail exceeded my
+                            expectations.
                             I wouldn't hesitate to use their services again in the future.”</div>
-                        <div class="card-footer">December 10, 2022</div>
                     </div>
                 </ng-template>
             </owl-carousel-o>
@@ -361,14 +462,14 @@
 </section>
 <section class="step-section carBgLight section">
     <div class="container">
-        <div class="row align-items-end mb-5">
+        <h2>Our Auto Transport Process</h2>
+        <!-- <div class="row align-items-end mb-5">
             <div class="col-md-6">
-                <h2 class="m-0">Our Auto Transport Process</h2>
             </div>
             <div class="col-md-6">
                 <p class="m-0">Get a quote and book your order. We handle the rest.</p>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-md-3">
                 <div class="card-item">
@@ -472,8 +573,12 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <h2 class="m-0">Want to know the cost <br>
-                    of Shipping a Car with us?</h2>
+                <!-- <h2 class="m-0">Want to know the cost <br>
+                    of Shipping a Car with us?</h2> -->
+                <h2>The Speedy Way Is The Right Way</h2>
+                <p>We are commitment to provide an excellent service to our customers. We work with safe, secure and
+                    reliable auto transport carriers. From coast to coast we've got your vehicle covered. Leave the
+                    hassle of auto transport to us, so you can focus on the journey ahead. </p>
             </div>
             <div class="col-md-6">
                 <div class="quote-btn-wrapper">
@@ -482,7 +587,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
                             <path
                                 d="M8.82104 14.1908C10.884 16.2386 13.2718 18.1948 14.2092 17.2503C15.5515 15.8982 16.3777 14.7219 19.3561 17.0972C22.3346 19.4737 20.0599 21.0731 18.7599 22.3832C17.2597 23.8947 11.6409 22.4891 6.07143 16.9619C0.502313 11.4336 -0.946186 5.82573 0.555082 4.31349C1.85547 3.00328 3.43778 0.717235 5.83502 3.67837C8.23343 6.638 7.06341 7.47322 5.72117 8.82566C4.78418 9.76986 6.75777 12.1426 8.82104 14.1908ZM11.8124 4.4213C11.8124 4.4213 11.1901 4.32407 10.7543 4.76014C10.3058 5.20868 10.2862 5.98138 10.7589 6.45364C11.0382 6.73295 11.4321 6.79249 11.4321 6.79249C12.1999 6.93649 13.3571 7.18033 14.5885 8.41138C15.8195 9.64237 16.0634 10.7995 16.2074 11.5677C16.2074 11.5677 16.2669 11.9616 16.5462 12.2409C17.0185 12.7133 17.7912 12.694 18.2397 12.2455C18.6755 11.8098 18.5786 11.1875 18.5786 11.1875C18.3347 9.63228 17.5809 8.00774 16.2865 6.71339C14.9917 5.41904 13.3671 4.66552 11.8124 4.4213ZM17.6498 5.35003C19.9068 7.60709 20.8691 10.1687 20.5559 12.2444C20.5559 12.2444 20.4466 12.9017 20.8759 13.331C21.3591 13.8143 22.125 13.7864 22.5773 13.3345C22.8679 13.0438 22.9312 12.5708 22.9312 12.5708C23.1902 10.777 22.8645 7.16836 19.3478 3.65204C15.8311 0.135662 12.2228 -0.18999 10.429 0.0685918C10.429 0.0685918 9.95636 0.13156 9.66535 0.422513C9.21304 0.874823 9.18555 1.64076 9.66873 2.12394C10.0981 2.5533 10.7554 2.44394 10.7554 2.44394C12.8312 2.1307 15.3927 3.09302 17.6498 5.35003Z"
-                                fill="#FC684E" />
+                                fill="#017EF6" />
                         </svg>
                         (122)-236-5365
                     </a>
@@ -497,7 +602,7 @@
         <p class="text-center">Car Transport delivers on-time, reliable, car shipping and excellent customer service</p>
         <div class="card-wrapper">
             <div class="row grid-gap">
-                <div class="col-md-3">
+                <div class="col-md-6 col-xl-3">
                     <div class="card-item">
                         <div class="card-icon">
                             <img src="../../assets/images/our_srvices/Enclosed Auto Transport Shipping.svg" alt="">
@@ -506,10 +611,20 @@
                         <div class="card-body">is a premium service that involves shipping a vehicle(s) in an enclosed
                             trailer or container, providing extra protection from the elements, debris, and other
                             hazards that may arise during transport.</div>
-                        <div class="card-footer">December 10, 2022</div>
+                        <div class="readMore">
+                            <a href="javascript:void(0)" routerLink="service">Read More
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                    </svg></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-xl-3">
                     <div class="card-item">
                         <div class="card-icon">
                             <img src="../../assets/images/our_srvices/Open Auto Transport Shipping.svg" alt="">
@@ -518,10 +633,20 @@
                         <div class="card-body">is a standard service that involves shipping a vehicle(s) on an open
                             carrier trailer. This is the most common and cost-effective way to ship a vehicle. This
                             service is also the most widely available </div>
-                        <div class="card-footer">December 10, 2022</div>
+                        <div class="readMore">
+                            <a href="javascript:void(0)" routerLink="service">Read More
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                    </svg></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-xl-3">
                     <div class="card-item">
                         <div class="card-icon">
                             <img src="../../assets/images/our_srvices/door-to-door Shipping.svg" alt="">
@@ -531,10 +656,20 @@
                             convenient and hassle-free auto transport experience. With this service, we handle the
                             entire transportation process, picking up your vehicle from its current location and
                             delivering it directly to the desired destination of your choice.</div>
-                        <div class="card-footer">December 10, 2022</div>
+                        <div class="readMore">
+                            <a href="javascript:void(0)" routerLink="service">Read More
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                    </svg></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-xl-3">
                     <div class="card-item">
                         <div class="card-icon">
                             <img src="../../assets/images/our_srvices/Guaranted pickup.svg" alt="">
@@ -544,10 +679,20 @@
                             time-sensitive solution for your auto transport needs. We understand that some situations
                             require a faster or immediate pick-up, and our service is designed to cater to those
                             requirements.</div>
-                        <div class="card-footer">December 10, 2022</div>
+                        <div class="readMore">
+                            <a href="javascript:void(0)" routerLink="service">Read More
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                    </svg></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-xl-3">
                     <div class="card-item">
                         <div class="card-icon">
                             <img src="../../assets/images/our_srvices/Hawaii.svg" alt="">
@@ -557,10 +702,20 @@
                             efficient solution for transporting vehicles to and from Hawaii. Whether you are relocating,
                             buying or selling a vehicle, or simply need to move your car to or from the beautiful
                             islands of Hawaii, we have you covered.</div>
-                        <div class="card-footer">December 10, 2022</div>
+                        <div class="readMore">
+                            <a href="javascript:void(0)" routerLink="service">Read More
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                    </svg></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-xl-3">
                     <div class="card-item">
                         <div class="card-icon">
                             <img src="../../assets/images/our_srvices/Motorcycle Shipping.svg" alt="">
@@ -570,10 +725,20 @@
                             transporting motorcycles to various destinations. Whether you're a motorcycle enthusiast, a
                             buyer or seller, or simply need to transport your bike for a specific event or relocation,
                             we specialize in handling motorcycle shipments with care.</div>
-                        <div class="card-footer">December 10, 2022</div>
+                        <div class="readMore">
+                            <a href="javascript:void(0)" routerLink="service">Read More
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                    </svg></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-xl-3">
                     <div class="card-item">
                         <div class="card-icon">
                             <img src="../../assets/images/our_srvices/Inoperable Vehicle Shipping.svg" alt="">
@@ -583,10 +748,20 @@
                             transport vehicles that are not in running condition. If you have a vehicle that is
                             inoperable or unable to start, we have the expertise and resources to safely and efficiently
                             transport it to your desired destination.</div>
-                        <div class="card-footer">December 10, 2022</div>
+                        <div class="readMore">
+                            <a href="javascript:void(0)" routerLink="service">Read More
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                    </svg></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6 col-xl-3">
                     <div class="card-item">
                         <div class="card-icon">
                             <img src="../../assets/images/our_srvices/Auctions Auto transport.svg" alt="">
@@ -596,7 +771,17 @@
                             convenient solution for transporting vehicles purchased or sold at auctions. We understand
                             the unique requirements and time-sensitive nature of auction transactions, and we are here
                             to assist you with the seamless transportation of your auction vehicles.</div>
-                        <div class="card-footer">December 10, 2022</div>
+                        <div class="readMore">
+                            <a href="javascript:void(0)" routerLink="service">Read More
+                                <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z" />
+                                        <path fill-rule="evenodd"
+                                            d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z" />
+                                    </svg></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -638,173 +823,144 @@
                 </div>
             </div>
         </div> -->
-
-        <div class="trans_wrapper">
-            <div class="transimg">
-                <img src="../../assets/images/trans_vehical.png" alt="">
-                
-            </div>
-            <div class="transContent col-md-8 ms-auto">
-                <h2>About Speedyway Auto Transport</h2>
-                <p>Welcome to Speedyway, your trusted partner for all your auto transport needs. We are a leading
-                    auto transport broker dedicated to providing reliable, efficient, and personalized
-                    transportation solutions for vehicles across the country.</p>
-                <p>At Speedyway, we understand that transporting your vehicle is a significant decision. That's why
-                    we strive to make the process as seamless and stress-free as possible. With years of experience
-                    in the industry, we have built a strong reputation for delivering exceptional service and
-                    customer satisfaction.</p>
-                <p>What sets us apart is our personalized approach. We take the time to listen to your specific
-                    requirements, whether you're shipping a family car, a classic beauty, or a fleet of commercial
-                    vehicles. Our dedicated team will work closely with you to understand your needs and tailor a
-                    transportation solution that fits your budget and timeline.</p>
-                <p>At Speedyway, we believe in clear and transparent communication. We will keep you informed at
-                    every step of the process, providing updates on the status of your shipment and addressing any
-                    questions or concerns you may have along the way.
-                    Customer satisfaction is at the core of our business. We pride ourselves on going above and
-                    beyond to exceed your expectations. Our friendly and knowledgeable staff is always available to
-                    assist you, providing exceptional customer service that makes your experience with us a positive
-                    one.
-                </p>
-                <p>When you choose Speedyway, you can have peace of mind knowing that your vehicle is in the hands
-                    of professionals who care. Let us take the hassle out of your auto transport needs and deliver
-                    your vehicle safely and efficiently to its destination.
-                    Thank you for considering Speedyway as your auto transport broker. We look forward to serving
-                    you and making your vehicle transport experience a smooth and memorable one.
-                </p>
-                <a href="javascript:void(0)" class="ctm-btn mt-2 d-inline-block" (click)="gotoTop()">Car shipping cost
-                    information</a>
-            </div>
-        </div>
     </div>
 </section>
 <section class="auto-transport-section">
     <div class="container">
         <div class="auto-t-content">
             <h2>The Ultimate Guide to Hassle-Free Auto Transport Services.</h2>
-        <p>Are you looking for a reliable and efficient auto transport service? Look no further! AtSpeedy Way Auto transport, we are dedicated to making your vehicle shipping experience as smooth and stress-free as possible. Whether you are moving across the country or need to ship a car you just purchased, our team of experts is here to assist you every step of the way.</p>
+            <p>Are you looking for a reliable and efficient auto transport service? Look no further! AtSpeedy Way Auto
+                transport, we are dedicated to making your vehicle shipping experience as smooth and stress-free as
+                possible. Whether you are moving across the country or need to ship a car you just purchased, our team
+                of experts is here to assist you every step of the way.</p>
         </div>
     </div>
 </section>
 <section class="step-section carBgLight section">
     <div class="container">
-        <h2 class="mb-5">Why Choose Our Auto Transport Services</h2>            
+        <h2 class="mb-5">Why Choose Our Auto Transport Services</h2>
         <div class="row grid-gap justify-content-center">
-            <div class="col-md-4">
+            <div class="col-md-6 col-xl-4">
                 <div class="card-item">
                     <div class="card-icon">
                         <img src="../../assets/images/our_srvices/Extensive Network of carrier.svg" alt="" srcset="">
                     </div>
                     <div class="card-title">Extensive Network of Carriers</div>
-                    <div class="card-body">We have established relationships with a vast network of licensed and insured car carriers, ensuring you have access to a wide range of options for shipping your vehicle.</div>
-                    <div class="card-footer">December 10, 2022</div>
+                    <div class="card-body">We have established relationships with a vast network of licensed and insured
+                        car carriers, ensuring you have access to a wide range of options for shipping your vehicle.
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-xl-4">
                 <div class="card-item">
                     <div class="card-icon">
                         <img src="../../assets/images/our_srvices/Competitive Pricing.svg" alt="" srcset="">
                     </div>
                     <div class="card-title">Competitive Pricing</div>
-                    <div class="card-body">Our team strives to provide you with the most competitive rates in the industry. We'll work with you to find the best deal that suits your budget.</div>
-                    <div class="card-footer">December 10, 2022</div>
+                    <div class="card-body">Our team strives to provide you with the most competitive rates in the
+                        industry. We'll work with you to find the best deal that suits your budget.</div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-xl-4">
                 <div class="card-item">
                     <div class="card-icon">
                         <img src="../../assets/images/our_srvices/Personalized Service.svg" alt="" srcset="">
                     </div>
                     <div class="card-title">Personalized Service</div>
-                    <div class="card-body">We understand that every customer has unique needs. Our experienced brokers will tailor their services to meet your specific requirements, whether you need open or enclosed transport, expedited shipping, or door-to-door delivery.</div>
-                    <div class="card-footer">December 10, 2022</div>
+                    <div class="card-body">We understand that every customer has unique needs. Our experienced brokers
+                        will tailor their services to meet your specific requirements, whether you need open or enclosed
+                        transport, expedited shipping, or door-to-door delivery.</div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-xl-4">
                 <div class="card-item">
                     <div class="card-icon">
                         <img src="../../assets/images/our_srvices/Seamless Booking process.svg" alt="" srcset="">
                     </div>
                     <div class="card-title">Seamless Booking Process</div>
-                    <div class="card-body">We've streamlined the booking process to save you time and effort. It's as easy as providing your vehicle details, pickup and delivery locations, and your preferred dates.</div>
-                    <div class="card-footer">December 10, 2022</div>
+                    <div class="card-body">We've streamlined the booking process to save you time and effort. It's as
+                        easy as providing your vehicle details, pickup and delivery locations, and your preferred dates.
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-xl-4">
                 <div class="card-item">
                     <div class="card-icon">
                         <img src="../../assets/images/our_srvices/Reliable customer Support.svg" alt="" srcset="">
                     </div>
                     <div class="card-title">Reliable Customer Support</div>
-                    <div class="card-body">Our customer support team is available to answer any questions and provide updates throughout the shipping process, ensuring peace of mind.</div>
-                    <div class="card-footer">December 10, 2022</div>
+                    <div class="card-body">Our customer support team is available to answer any questions and provide
+                        updates throughout the shipping process, ensuring peace of mind.</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="exprience-section">
+<section class="exprience-section section">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-4">
+            <!-- <div class="col-lg-4">
                 <div class="content">
                     <img src="../../assets/images/Objects1.svg" alt="" srcset="">
                 </div>
+            </div> -->
+            <div class="content text-center mb-3">
+                <h3>Transporters You Can Trust</h3>
+                <p>Satisfied customers</p>
             </div>
-            <div class="col-md-4">
-                <div class="content">
-                    <h3>Transporters You Can Trust</h3>
-                    <p>Satisfied customers</p>
-                </div>
-            </div>
-            <div class="col-md-4">
+            <!-- <div class="col-lg-4">
                 <div class="content">
                     <img src="../../assets/images/Objects2.svg" alt="" srcset="">
                 </div>
-            </div>
-            <div class="col-md-4">
+            </div> -->
+            <div class="col-lg-4">
                 <div class="content">
+                    <div class="con-img">
+                        <img src="../../assets/images/customized.svg" alt="">
+                    </div>
                     <h3>Customized Solutions</h3>
                     <p>Our services are designed to cater to your specific requirements, providing customized solutions
                         that go beyond a one-size-fits-all approach. We take the time to understand your needs, ensuring
                         clear communication, attention to detail, and exceptional customer service. </p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="circle1">
                     <div class="circle2">
                         <div class="circle3">
                             <div class="circle-img">
-                                <img src="../../assets/images/whiteLogo.svg" alt="">
+                                <img src="../../assets/images/logo.png" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="content">
+                    <div class="con-img">
+                        <img src="../../assets/images/carrier.svg" alt="">
+                    </div>
                     <h3>{{year}} K + auto carriers</h3>
                     <p>Our extensive network of over 15,000 auto carriers consists of carefully vetted experts in the
                         field of vehicle transport. Rest assured, your vehicle will be handled by trusted industry
                         professionals who will treat it with the utmost care and attention, as if it were their own.</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 mt-5 m-auto">
                 <div class="content">
-                    <img src="../../assets/images/Objects3.svg" alt="" srcset="">
-                </div>
-            </div>
-            <div class="col-md-4 mt-5">
-                <div class="content">
+                    <div class="con-img">
+                        <img src="../../assets/images/money-back-guarantee.svg" alt="">
+                    </div>
                     <h3>Money back guarantee</h3>
                     <p>If you cancel your car transport request before carrier assignment, you will receive a full
                         refund.</p>
                 </div>
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-lg-4">
                 <div class="content">
                     <img src="../../assets/images/Objects4.svg" alt="" srcset="">
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
@@ -869,7 +1025,7 @@
         </div>
     </div>
 </section> -->
-<section class="renking-section">
+<!-- <section class="renking-section">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -958,8 +1114,8 @@
             </div>
         </div>
     </div>
-</section>
-<section class="transport-work-section section">
+</section> -->
+<!-- <section class="transport-work-section section">
     <div class="container">
         <h2 class="text-center">How Our Auto Transport Works</h2>
         <div class="transportWork-wrapper">
@@ -969,7 +1125,8 @@
                 </div>
                 <div class="t-content">
                     <h3>Quote Request</h3>
-                    <p>Simply request a free quote through our website or by contacting our team. Provide the necessary details about your vehicle, desired transport services, and timeline.</p>
+                    <p>Simply request a free quote through our website or by contacting our team. Provide the necessary
+                        details about your vehicle, desired transport services, and timeline.</p>
                 </div>
             </div>
             <div class="transport-item">
@@ -978,7 +1135,8 @@
                 </div>
                 <div class="t-content">
                     <h3>Carrier Matching</h3>
-                    <p>We'll match you with a suitable carrier from our network, considering your preferences and requirements.</p>
+                    <p>We'll match you with a suitable carrier from our network, considering your preferences and
+                        requirements.</p>
                 </div>
             </div>
             <div class="transport-item">
@@ -987,7 +1145,8 @@
                 </div>
                 <div class="t-content">
                     <h3>Booking Confirmation</h3>
-                    <p>Once you've selected a carrier, we'll confirm the booking and provide all the necessary documentation for a smooth and secure transport process.</p>
+                    <p>Once you've selected a carrier, we'll confirm the booking and provide all the necessary
+                        documentation for a smooth and secure transport process.</p>
                 </div>
             </div>
             <div class="transport-item">
@@ -996,7 +1155,8 @@
                 </div>
                 <div class="t-content">
                     <h3>Tracking and Updates</h3>
-                    <p>We'll keep you informed about your vehicle's status throughout the journey, so you're always in the know.</p>
+                    <p>We'll keep you informed about your vehicle's status throughout the journey, so you're always in
+                        the know.</p>
                 </div>
             </div>
             <div class="transport-item">
@@ -1005,7 +1165,80 @@
                 </div>
                 <div class="t-content">
                     <h3>Delivery and Satisfaction</h3>
-                    <p>Your vehicle will be safely delivered to the destination, and we'll ensure your complete satisfaction with our service.</p>
+                    <p>Your vehicle will be safely delivered to the destination, and we'll ensure your complete
+                        satisfaction with our service.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="transport-work-section section">
+    <div class="container">
+        <h2 class="text-center">How Our Auto Transport Works</h2>
+        <div class="transportWork-wrapper">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="transport-item">
+                        <div class="t-img">
+                            <img src="../../assets/images/trust.png" alt="">
+                        </div>
+                        <div class="t-content">
+                            <h3>Quote Request</h3>
+                            <p>Simply request a free quote through our website or by contacting our team. Provide the
+                                necessary details about your vehicle, desired transport services, and timeline.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="transport-item">
+                        <div class="t-img">
+                            <img src="../../assets/images/trust.png" alt="">
+                        </div>
+                        <div class="t-content">
+                            <h3>Carrier Matching</h3>
+                            <p>We'll match you with a suitable carrier from our network, considering your preferences
+                                and
+                                requirements.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="transport-item">
+                        <div class="t-img">
+                            <img src="../../assets/images/trust.png" alt="">
+                        </div>
+                        <div class="t-content">
+                            <h3>Booking Confirmation</h3>
+                            <p>Once you've selected a carrier, we'll confirm the booking and provide all the necessary
+                                documentation for a smooth and secure transport process.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="transport-item">
+                        <div class="t-img">
+                            <img src="../../assets/images/trust.png" alt="">
+                        </div>
+                        <div class="t-content">
+                            <h3>Tracking and Updates</h3>
+                            <p>We'll keep you informed about your vehicle's status throughout the journey, so you're
+                                always
+                                in the know.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="transport-item">
+                        <div class="t-img">
+                            <img src="../../assets/images/trust.png" alt="">
+                        </div>
+                        <div class="t-content">
+                            <h3>Delivery and Satisfaction</h3>
+                            <p>Your vehicle will be safely delivered to the destination, and we'll ensure your complete
+                                satisfaction with our service.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

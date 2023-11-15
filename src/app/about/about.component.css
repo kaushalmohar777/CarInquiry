@@ -1,0 +1,34 @@
+
+.trans_wrapper {
+    position: relative;
+    margin-top: 80px;
+}
+
+.transimg {
+    position: absolute;
+    left: 0px;
+    top: 25%;
+    width: 550px;
+}
+
+.transContent {
+    background: var(--formBg-color--);
+    padding: 50px;
+    padding-left: 200px;
+}
+.transimg {
+    position: absolute;
+    left: 0px;
+    top: 20%;
+    width: 550px;
+}
+
+.transContent::after {
+    content: "";
+    background: var(--formBg-color--);
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    right: -100px;
+    top: 0;
+}
