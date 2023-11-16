@@ -48,6 +48,9 @@ img{
 main {
     margin-top: 100px;
 }
+.s-grid-gap{
+    grid-row-gap: 70px;
+}
 .section{
     padding: 100px 0;
 }
