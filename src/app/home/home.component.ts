@@ -65,9 +65,9 @@ export class HomeComponent implements OnInit {
     margin: 20,
     navSpeed: 700,
     autoplay:true,
-    autoplayTimeout:2000,
+    autoplayTimeout:3000,
     // autoplayHoverPause:true,
-    autoplaySpeed:1500 ,
+    autoplaySpeed:2500 ,
     navText: ['', ''],
     responsive: {
       0: {
@@ -155,9 +155,9 @@ export class HomeComponent implements OnInit {
     margin: 0,
     navSpeed: 700,
     autoplay:true,
-    autoplayTimeout:2200,
+    autoplayTimeout:4000,
     // autoplayHoverPause:true,
-    autoplaySpeed:2000 ,
+    autoplaySpeed:3500 ,
     navText: ['', ''],
     responsive: {
       0: {

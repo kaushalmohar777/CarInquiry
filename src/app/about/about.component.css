@@ -1,6 +1,9 @@
 .about-content p {
     margin-bottom: 25px;
 }
+.about-section h2{
+    margin-bottom: 30px;
+}
 
 .trans_wrapper {
     position: relative;
@@ -34,4 +37,12 @@
     height: 100%;
     right: -100px;
     top: 0;
+}
+
+.about-desc{
+    text-align: center;
+}
+
+.faq-section {
+    padding-top: 0;
 }

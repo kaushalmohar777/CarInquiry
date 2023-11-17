@@ -16,15 +16,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --carWhite-color-- :#fff;
     --carBlack-color-- : #000;
     /* --formBg-color-- :#F4F7FB; */
-    --formBg-color-- :#F3EEFE;
+    --formBg-color-- :#F1F1FF;
     --border-color-- : #E0E0E0;
     --bgLight-color-- : #F5F7FA;
     --carOrang-color-- : #FC684E;
     --carGreen-color-- : #4BAE4F;
 }
+
 /* ::placeholder{
     color: #c4c4c4 !important;
 } */
+#banner .owl-theme .owl-nav {
+    margin-top: -35px;
+    z-index: 1;
+    position: relative ;
+}
 ul{
     padding: 0;
     margin: 0;
@@ -58,7 +64,7 @@ section h2 {
     /* color: var(--carPrimary-color--); */
     font-size: 40px;
     font-weight: 700;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 section p {
     color: var(--carSecondery-color--);
@@ -76,16 +82,16 @@ section p {
 }
 .ctmOrange-btn {
     background: var(--carPrimary-color-- );
-    padding: 6px 16px;
+    padding: 10px 25px;
     font-size: 20px;
     font-weight: 500;
     border-radius: 5px;
 }
 .ctmOrangeTrans-btn {
     background: var(--carWhite-color--);
-    padding: 6px 16px;
+    padding: 10px 25px;
     color: var(--carPrimary-color-- );
-    margin-left: 15px;
+    margin-left: 20px;
     font-size: 20px;
     border-radius: 5px;
     font-weight: 500;
@@ -96,29 +102,32 @@ section p {
     border-radius: 10px;
     transition: ease 0.4s;
     height: calc(100% - 0px);
-    min-height: 295px;
+    min-height: 335px;
 }
 .card-item:hover, .ranking-items:hover {
     transform: translateY(-15px);
-    /* box-shadow: rgba(12, 36, 83, 0.2) 0px 1px 1px, rgba(12, 36, 83, 0.2) 0px 2px 2px, rgba(12, 36, 83, 0.2) 0px 4px 4px, rgba(12, 36, 83, 0.2) 0px 8px 8px, rgba(12, 36, 83, 0.2) 0px 16px 16px; */
-    box-shadow: rgba(1, 126, 246, 0.2) 0px 1px 1px, rgba(1, 126, 246, 0.2) 0px 2px 2px, rgba(1, 126, 246, 0.2) 0px 4px 4px, rgba(1, 126, 246, 0.2) 0px 8px 8px, rgba(1, 126, 246, 0.2) 0px 16px 16px;
-
+    background: var(--formBg-color--);
+    /* box-shadow: rgba(1, 126, 246, 0.2) 0px 1px 1px, rgba(1, 126, 246, 0.2) 0px 2px 2px, rgba(1, 126, 246, 0.2) 0px 4px 4px, rgba(1, 126, 246, 0.2) 0px 8px 8px, rgba(1, 126, 246, 0.2) 0px 16px 16px; */
 }
 .card-item .card-title {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 500;
     color: var(--carPrimary-color--);
-    font-family: Poppins;
-    /* margin-bottom: 23px; */
+    font-family: Roboto;
+    margin-bottom: 16px;
 }
 .tierService-section .card-item .card-title{
     color: var(--carBlack-color--);
+    font-size: 20px;
 }
 .card-item .card-heading {
     font-size: 25px;
     font-weight: 500;
-    font-family: Poppins;
-    color: var(--carPrimary-color--);
+    font-family: Roboto;
+    /* color: var(--carPrimary-color--); */
+    padding: 0 32px;
+    line-height: 1.2;
+    margin-top: 10px;
 }
 .card-title span {
     margin-left: 20px;
@@ -130,9 +139,11 @@ section p {
 }
 .card-item .card-body{
     font-weight: 300;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--carSecondery-color--);
-    margin-bottom: 20px;
+}
+.readMore{
+    margin-top:10px ;
 }
 /* .card-item .card-footer{
     font-size: 15px;
@@ -235,15 +246,15 @@ form .ctm-btn {
     padding: 300px 0;
 }
 .banner-slider1{
-    background: url(../src/assets/images/banner-img.png) center no-repeat;
+    background: url(../src/assets/images/banner-trukcloder.png) center no-repeat;
     background-size:cover ;
 }
 .banner-slider2{
-    background: url(../src/assets/images/banner-imgg.png) center no-repeat;
+    background: url(../src/assets/images/banner-truck.png) center no-repeat;
     background-size:cover ;
 }
 .banner-slider3{
-    background: url(../src/assets/images/banner-imggg.png) center no-repeat;
+    background: url(../src/assets/images/banner-truckstaire.png) center no-repeat;
     background-size:cover ;
 }
 .banner-section h1 {
@@ -254,12 +265,32 @@ form .ctm-btn {
 }
 .banner-section h3 {
     color: var(--carWhite-color--);
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 
 /* banner section css end============== */
+
+/* stream-section css start================ */
+.stream-section {
+    background: var(--carBlack-color--);
+    color: var(--carWhite-color--);
+    padding: 30px 0;
+    margin-top: 10px;
+}
+.stream-section h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.stream-section img {
+    width: 50px;
+    margin-right: 15px;
+}
+.stream-section h3 {
+    margin: 0;
+}
+/* stream-section css end================ */
 
 /* step-section section css start=================== */
 .step-section .card-item{
@@ -277,30 +308,35 @@ form .ctm-btn {
     height: 120px;
 }
 /* step-section section css end===================  */
-.spingCompany .card-item {
+/* .spingCompany .card-item {
     border: none;
     background: var(--formBg-color--);
+} */
+.spingCompany .card-item:hover{
+    background: var(--formBg-color--);
+    /* border-color:var(--formBg-color--) ; */
 }
-
 /* quality-section css start=================== */
 .quality-section{
     background: var(--formBg-color--);
 }
 .quality-section .quality-items {
-    border: 1px solid var(--carSecondery-color--);
-    padding: 30px;
+    border: 1px solid var(--carPrimary-color--);
+    background: var(--carWhite-color--);
+    padding: 35px;
     border-radius: 10px;
-    padding-left: 65px;
+    padding-left: 70px;
     position: relative;
     margin-bottom: 20px;
 }
 .quality-items p{
-    margin: 0
+    margin: 0;
+    font-size: 16px;
 }
 .quality-section .quality-img {
     width: 90px;
     height: 90px;
-    border: 1px solid #5b6573;
+    border: 1px solid var(--carPrimary-color--);
     border-radius: 50%;
     padding: 20px;
     position: absolute;
@@ -311,19 +347,37 @@ form .ctm-btn {
 .quality.content {
     margin-right: 70px;
 }
+.quality.content h2{
+    margin-bottom: 30px;
+}
 .quality.content h4 {
+    font-size: 18px;
     font-weight: 400;
     color: var(--carSecondery-color--);
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+}
+.quality.content strong {
+    font-size: 25px;
+    font-weight: 500;
+    display: block;
+    margin-top: 25px;
+}
+.quality.content p{
+    margin-bottom: 15px;
 }
 /* quality-section css end=================== */
+
 /* quote-section css start============= */
 .quote-section{
-    background: var(--carBlack-color--);
+    /* background: var(--carBlack-color--); */
+    /* background: url(../src/assets/images/banner-imgg.png); */
+    background: url(../src/assets/images/speedy-banner.png);
     color: var(--carWhite-color--);
+    padding: 130px 0;
 }
-.quote-section h2{
+.quote-section h2 {
     color: var(--carWhite-color--);
+    margin-bottom: 30px;
 }
 .quote-section p {
     color: var(--carWhite-color--);
@@ -336,6 +390,9 @@ form .ctm-btn {
 /* quote-section css end============= */
 
 /* transport-service-section css start============ */
+.transport-service-section h2{
+    margin-bottom: 30px;
+}
 .transport-service-section .card-icon {
     width: 70px;
     margin-bottom: 13px;
@@ -408,7 +465,7 @@ form .ctm-btn {
     font-weight: 700;
 }
 .exprience-section .content p {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--carWhite-color--);
 }
@@ -499,8 +556,9 @@ form .ctm-btn {
     /* width: 20%; */
     /* margin-right: 20px; */
     padding: 20px;
-    background: var(--carPrimary-color--);
-    color: var(--carWhite-color--);
+    border: 1px solid #ccc;
+    /* background: var(--carPrimary-color--); */
+    /* color: var(--carWhite-color--); */
     border-radius: 5px;
     position: relative;
     text-align: center;
@@ -508,9 +566,12 @@ form .ctm-btn {
     height: calc(100% - 0px);
 }
 .transport-item:hover{
+    background: var(--carPrimary-color--);
+    border: 1px solid var(--carPrimary-color--);
+    color: var(--carWhite-color--);
     transform: translateY(-15px);
     /* box-shadow: rgba(12, 36, 83, 0.2) 0px 1px 1px, rgba(12, 36, 83, 0.2) 0px 2px 2px, rgba(12, 36, 83, 0.2) 0px 4px 4px, rgba(12, 36, 83, 0.2) 0px 8px 8px, rgba(12, 36, 83, 0.2) 0px 16px 16px; */
-    box-shadow: rgba(1, 126, 246, 0.2) 0px 1px 1px, rgba(1, 126, 246, 0.2) 0px 2px 2px, rgba(1, 126, 246, 0.2) 0px 4px 4px, rgba(1, 126, 246, 0.2) 0px 8px 8px, rgba(1, 126, 246, 0.2) 0px 16px 16px;
+    /* box-shadow: rgba(1, 126, 246, 0.2) 0px 1px 1px, rgba(1, 126, 246, 0.2) 0px 2px 2px, rgba(1, 126, 246, 0.2) 0px 4px 4px, rgba(1, 126, 246, 0.2) 0px 8px 8px, rgba(1, 126, 246, 0.2) 0px 16px 16px; */
 }
 .transport-item .t-img {
     width: 130px;
@@ -534,13 +595,14 @@ form .ctm-btn {
 }
 .t-content h3{
     margin-bottom: 20px;
+    font-size: 25px;
 }
 .t-content p{
     margin: 0;
-    color: var(--carWhite-color--);
+    font-size: 16px;
 }
-.transport-item:last-child{
-    margin-right: 0;
+.transport-item:hover .t-content p{
+    color: var(--carWhite-color--);
 }
 /* transport-work-section css end================ */
 
@@ -559,14 +621,27 @@ form .ctm-btn {
     position: absolute;
     top: 0;
 }
-.auto-t-content{
+.auto-t-content {
     position: relative;
     z-index: 1;
+    text-align: center;
+    padding: 0 100px;
 }
 .auto-transport-section h2{
     color: var(--carWhite-color--);
+    margin-bottom: 30px;
 }
 .auto-transport-section p{
     color: var(--carWhite-color--);
 }
 /* auto-transport-section css end=================== */
+
+/* .faq-section css start ==================== */
+.faq-section .accordion-button:not(.collapsed){
+    background: var(--carPrimary-color--);
+    color: var(--carWhite-color--);
+}
+.faq-section .accordion-button:not(.collapsed)::after{
+    background-image: url(../src/assets/images/upperArrow.svg);
+}
+/* .faq-section css end ==================== */

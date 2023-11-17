@@ -5,8 +5,8 @@ footer{
     background: var(--carBlack-color--);
 }
 footer p {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
 }
 a{
     color: var(--carWhite-color--);
@@ -50,7 +50,7 @@ input.f-mail::placeholder {
     display: inline-block;
 } */
 .social {
-    width: 28px;
+    /* width: 28px; */
     display: inline-block;
     margin-right: 10px;
 }
