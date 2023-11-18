@@ -1,7 +1,119 @@
-@media (max-width:1280px) {
+
+@media (max-width:1024px) {
+    .section {
+        padding: 60px 0;
+    }
+    section h2 {
+        font-size: 28px;
+    }
     
-section.exprience-section::before {
-     bottom: -17%;
-    z-index: -1;
+    .stream-section h3 {
+        font-size: 18px;
+    }
+    .stream-section img {
+        width: 40px;
+        margin-right: 15px;
+    }
+    .t-content h3 {
+        font-size: 20px;
+    }
+    .quality-items h3{
+        font-size: 20px;
+    }
+    .card-item .card-heading {
+        font-size: 20px;
+        padding: 0;
+    }
+    .quote-btn-wrapper {
+        justify-content: start;
+        margin-top: 30px;
+    }
+    .quote-section p {
+        width: 80%;
+    }
+    .card-item .card-title {
+        font-size: 20px;
+    }
+    .exprience-section .content h3 {
+        font-size: 28px;
+    }
+    .circle1 {
+        width: 290px;
+        height: 290px;
+        margin-bottom: 45px;
+    }
+    .circle2 {
+        width: 230px;
+        height: 230px;
+    }
+    .circle3 {
+        width: 150px;
+        height: 150px;
+    }
+    .quality-section .quality-img{
+        left: -9%;
+    }
 }
+
+
+@media (max-width:991px) {
+    .stream-section .st-text {
+        text-align: center !important;
+    }
+    .stream-section .st-text img {
+        display: block;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    .quality-section .quality-img{
+        left: -7%;
+    }
+    .auto-t-content{
+        padding: 0;
+    }
+    .auto-transport-section{
+        padding: 100px 0;
+    }
+    .card-title span {
+        margin-left: 0;
+        display: block;
+    }
+    .card-item{
+        min-height: 395px;
+    }
+}
+
+@media (max-width:767px) {
+
+    .stream-section h3 {
+        font-size: 16px;
+    }
+    .quality-section .quality-items{
+        padding-left: 35px;
+    }
+    .quality.content{
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    .quality-section .quality-img{
+        position: static;
+        margin-bottom: 20px;
+    }
+    .quote-btn-wrapper{
+        flex-direction: column;
+    }
+    .quote-btn-wrapper .ctmOrangeTrans-btn{
+        margin-top: 15px;
+        margin-left: 0;
+    }
+    .quote-section p{
+        width: 100%;
+    }
+    .card-item {
+        min-height: 290px;
+    }
+    .card-title span {
+        display: inline-block;
+        margin-left: 20px;
+    }
 }

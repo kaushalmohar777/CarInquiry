@@ -24,12 +24,6 @@ header .navbar-nav .nav-link.contact{
     font-weight: 500;
 }
 
-/* header .navbar-nav .nav-link.ctm-btn {
-    background:var(--carPrimary-color--);
-    padding: 15px 33px;
-    border-radius: 4px;
-    color: var(--carWhite-color--);
-} */
 .ctm-btn{
     background:var(--carPrimary-color--);
     padding: 15px 33px;
@@ -39,6 +33,7 @@ header .navbar-nav .nav-link.contact{
 }
 .ctm-btn svg{
     margin-right: 10px;
+    vertical-align: sub;
 }
 header .nav-item a {
     position: relative;

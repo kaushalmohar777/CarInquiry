@@ -5,8 +5,9 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class RouteDetailService {
-
-  constructor() { }
+  
+  activeClass = new BehaviorSubject<boolean>(true);
   carRoute = new BehaviorSubject({});
+
   // carRoute = new BehaviorSubject({from_locaton:'', to_locaton:'', time:'', carType:''});
 }

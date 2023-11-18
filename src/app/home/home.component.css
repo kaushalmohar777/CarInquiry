@@ -1,3 +1,10 @@
+.form-batch {
+    position: absolute;
+    width: 150px;
+    left: -80px;
+    top: -40px;
+    rotate: -24deg;
+}
 .ctm-dropdown .dropdown button {
     background: #fff;
     border: navajowhite;
@@ -76,4 +83,51 @@ input[type="date"]{
     z-index: 1;
     width: 30%;
     right: 20%;
+}
+
+/* responsive css start================== */
+
+@media (max-width:1024px) {
+    .formPosition {
+        width: 35% ;
+        right: 10% ;
+    }
+    /* banner-section css start============ */
+    .banner-section h1 {
+        font-size: 35px;
+        padding-right: 40px;
+    }
+    /* banner-section css end============ */
+
+}
+
+@media (max-width:767px) {
+    .banner-slider {
+        padding: 100px 0;
+    }
+    .banner-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .formPosition {
+        order: -1;
+        position: static;
+        width: 70%;
+        margin-top: 70px;
+        margin-left: 15%;
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width:575px) {
+    .form-batch {
+        position: absolute;
+        width: 100px;
+        left: -40px;
+        top: -40px;
+        rotate: -24deg;
+    }
+    .ctm-form {
+        padding: 30px 45px;
+    }
 }

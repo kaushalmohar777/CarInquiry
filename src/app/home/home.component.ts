@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { RouteDetailService } from '../route-detail.service';
@@ -10,7 +10,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   carInfo: any = [
     { carType: "small Car", carImg: '../../assets/images/carType/smallCar.svg' },
     { carType: "Midsize Car", carImg: '../../assets/images/carType/midsizeCar.svg' },
@@ -28,8 +28,14 @@ export class HomeComponent implements OnInit {
   constructor(private _carRoute: RouteDetailService, private router: Router) { }
   ngOnInit(): void {
     this.counter();
+    this._carRoute.activeClass.next(true);
+    // console.log(this._carRoute.activeClass.value)
+    
   }
-
+  ngOnDestroy(): void {
+    this._carRoute.activeClass.next(false);
+    // console.log(this._carRoute.activeClass.value)
+  }
   mailForm = new FormGroup({
     from_locaton: new FormControl(null, Validators.required),
     to_locaton: new FormControl(null, Validators.required),
@@ -73,11 +79,14 @@ export class HomeComponent implements OnInit {
       0: {
         items: 1
       },
-      400: {
+      300: {
+        items: 1
+      },
+      575: {
         items: 2
       },
       740: {
-        items: 3
+        items: 2
       },
       940: {
         items: 3
@@ -176,5 +185,5 @@ export class HomeComponent implements OnInit {
     nav: true
   }
   // banner slider logic end=======================
-
+  
 }
