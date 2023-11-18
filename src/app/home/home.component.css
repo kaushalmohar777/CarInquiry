@@ -102,6 +102,12 @@ input[type="date"]{
 }
 
 @media (max-width:767px) {
+    .vehical-item img {
+        width: 100%;
+    }
+    .vehical-item span {
+        font-size: 10px;
+    }
     .banner-slider {
         padding: 100px 0;
     }
@@ -120,6 +126,7 @@ input[type="date"]{
 }
 
 @media (max-width:575px) {
+    
     .form-batch {
         position: absolute;
         width: 100px;
@@ -129,5 +136,10 @@ input[type="date"]{
     }
     .ctm-form {
         padding: 30px 45px;
+    }
+
+    .ctm-dropdown .dropdown button {
+        padding: 15px 35px;
+        padding-left: 42px;
     }
 }

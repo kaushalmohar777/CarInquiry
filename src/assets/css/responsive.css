@@ -116,4 +116,10 @@
         display: inline-block;
         margin-left: 20px;
     }
+
+
+    .ctm-form .form-control, .ctm-form .form-select {
+        padding: 15px 35px;
+        padding-left: 45px;
+    }
 }
