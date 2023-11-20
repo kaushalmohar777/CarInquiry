@@ -176,12 +176,12 @@ input[type="date"]{
     }
 }
 
-@media (max-width:320px) {
+@media (max-width:300px) {
     .banner-section h1 {
-        padding-right:80px ;
+        padding-right:50px ;
     }
     .banner-section h3{
-        padding-right:16px
+        padding-right:0px
     }
 }
 
