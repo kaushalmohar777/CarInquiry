@@ -5,6 +5,9 @@
     top: -40px;
     rotate: -24deg;
 }
+.mob-br{
+    display: none;
+}
 .ctm-dropdown .dropdown button {
     background: #fff;
     border: navajowhite;
@@ -177,13 +180,17 @@ input[type="date"]{
 }
 
 @media (max-width:500px) {
+    .mob-br{
+        display: block;
+    }
     .banner-section h1 {
-        padding-right:95px ;
+        /* padding-right:95px ; */
+        padding-right: 0;
     }
     .banner-section h3{
-        padding-right:95px
+        padding-right:0px
     }
     .quote-section h2{
-        padding-right: 95px;
+        padding-right: 0px;
     }
 }
