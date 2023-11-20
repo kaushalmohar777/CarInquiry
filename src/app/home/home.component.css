@@ -169,20 +169,23 @@ input[type="date"]{
         display: none;
     }
     .quote-section h2 {
-        width: 80%;
+        width: 75%;
     }
     .content .con-img + h3 {
         font-size: 22px;
     }
 }
 
-@media (max-width:300px) {
+@media (max-width:400px) {
     .banner-section h1 {
-        padding-right:0px ;
-        font-size: 30px;
+        padding-right: 28px;
+        font-size: 28px;
     }
     .banner-section h3{
         padding-right:0px
+    }
+    .quote-section h2 {
+        width: 80%;
     }
 }
 
