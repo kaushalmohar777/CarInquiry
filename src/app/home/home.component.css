@@ -178,7 +178,7 @@ input[type="date"]{
 
 @media (max-width:300px) {
     .banner-section h1 {
-        padding-right:10px ;
+        padding-right:0px ;
         font-size: 30px;
     }
     .banner-section h3{
