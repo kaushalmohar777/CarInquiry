@@ -11,6 +11,9 @@ footer p {
 a{
     color: var(--carWhite-color--);
 }
+svg{
+    margin-right: 10px;
+}
 ul li{
     font-size: 14px;
     font-weight: 400;
@@ -52,7 +55,6 @@ input.f-mail::placeholder {
 .social {
     /* width: 28px; */
     display: inline-block;
-    margin-right: 10px;
 }
 .copyright ul{
     display: flex;
@@ -72,7 +74,14 @@ input.f-mail::placeholder {
     padding: 29px 0px;
 }
 
-
+@media (max-width:575px) {
+    .link-head{
+        margin-top: 22px;
+    }
+    .copyright ul{
+        justify-content: space-between;
+    }
+}
 
 
 

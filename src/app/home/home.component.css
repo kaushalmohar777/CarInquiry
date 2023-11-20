@@ -116,7 +116,6 @@ input[type="date"]{
         flex-direction: column;
     }
     .formPosition {
-        order: -1;
         position: static;
         width: 70%;
         margin-top: 70px;
@@ -126,7 +125,12 @@ input[type="date"]{
 }
 
 @media (max-width:575px) {
-    
+    section h2{
+        margin-bottom: 20px;
+    }
+    section p{
+        margin-bottom: 30px;
+    }
     .form-batch {
         position: absolute;
         width: 100px;
@@ -134,12 +138,40 @@ input[type="date"]{
         top: -40px;
         rotate: -24deg;
     }
-    .ctm-form {
-        padding: 30px 45px;
-    }
-
+    
     .ctm-dropdown .dropdown button {
         padding: 15px 35px;
         padding-left: 42px;
+    }
+
+
+    .formPosition {
+        width: 100%;
+        margin-top: 70px;
+        margin-bottom: 10px;
+        padding: 0 10px;
+        margin-left: 0;
+    }
+      
+    .form-batch {
+        left: unset;
+        right: 40px;
+    }
+
+    .banner-section h1 {
+        padding-right: 146px;
+    }
+    .ctmOrange-btn,
+    .ctmOrangeTrans-btn{
+        text-align: center;
+    }
+    .tierService-section h2 br{
+        display: none;
+    }
+    .quote-section h2 {
+        width: 50%;
+    }
+    .content .con-img + h3 {
+        font-size: 22px;
     }
 }

@@ -65,6 +65,10 @@
         margin: auto;
         margin-bottom: 15px;
     }
+    
+    .stream-section .owl-carousel .owl-item img{
+        width: 40px;
+    }
     .quality-section .quality-img{
         left: -7%;
     }
@@ -84,7 +88,30 @@
 }
 
 @media (max-width:767px) {
-
+    .desktop-view{
+        display: none;
+    }
+    .mobile-view{
+        display: block;
+    }
+    .banner-section h3 {
+        padding-right: 150px;
+    }
+    .auto-t-content h2 br{
+        display: none;
+    }
+    .stream-section .st-text img {
+        display: block;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    .stream-section{
+        margin: 0;
+        padding: 20px 0;
+    }
+    .stream-section .owl-nav{
+        display: none;
+    }
     .stream-section h3 {
         font-size: 16px;
     }
@@ -110,16 +137,29 @@
         width: 100%;
     }
     .card-item {
-        min-height: 290px;
+        min-height: 330px;
     }
-    .card-title span {
-        display: inline-block;
-        margin-left: 20px;
+    .content p {
+        padding: 0 20px;
     }
 
+    .ctm-form.sm-form{
+        max-width: 100%;
+        margin-left: 0;
+    }
 
     .ctm-form .form-control, .ctm-form .form-select {
         padding: 15px 35px;
         padding-left: 45px;
     }
+    .ctm-field {
+        margin-bottom: 5px !important;
+    }
+    .ctm-form {
+        padding: 30px;
+    }
+    .form-title h2{
+        margin-bottom: 20px;
+    }
+
 }

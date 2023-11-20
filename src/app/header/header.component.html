@@ -7,19 +7,19 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" #navToggle>
                 <ul class="navbar-nav m-auto mb-2">
                     <li class="nav-item">
-                        <a class="nav-link {{activeClass ? 'active' : ''}}" aria-current="page" href="javascript:void(0)" routerLink="">Home</a>
+                        <a class="nav-link {{activeClass ? 'active' : ''}}" aria-current="page" href="javascript:void(0)" routerLink="" (click)="navTogglebar()">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" routerLink="about" routerLinkActive="active">About Us</a>
+                        <a class="nav-link" href="javascript:void(0)" routerLink="about" routerLinkActive="active" (click)="navTogglebar()">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" routerLink="service" routerLinkActive="active">Services</a>
+                        <a class="nav-link" href="javascript:void(0)" routerLink="service" routerLinkActive="active" (click)="navTogglebar()">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" routerLink="faq" routerLinkActive="active">FAQs</a>
+                        <a class="nav-link" href="javascript:void(0)" routerLink="faq" routerLinkActive="active" (click)="navTogglebar()">FAQs</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)">Contact us</a>

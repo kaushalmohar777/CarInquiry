@@ -54,3 +54,11 @@ header .nav-item a.active::after,
 header .nav-item a:hover::after{
     width: 100%;
 }
+
+@media (max-width:991px){
+    header .nav-item a.active::after,
+    header .nav-item a:hover::after{
+        width: 21%;
+    }
+
+}

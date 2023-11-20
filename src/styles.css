@@ -52,7 +52,7 @@ img{
     background: var(--formBg-color--);
 }
 main {
-    margin-top: 100px;
+    margin-top: 105px;
 }
 .s-grid-gap{
     grid-row-gap: 70px;
@@ -274,6 +274,9 @@ form .ctm-btn {
 /* banner section css end============== */
 
 /* stream-section css start================ */
+.mobile-view{
+    display: none;
+}
 .stream-section {
     background: var(--carBlack-color--);
     color: var(--carWhite-color--);

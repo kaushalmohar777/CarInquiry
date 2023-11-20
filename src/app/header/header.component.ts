@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouteDetailService } from '../route-detail.service';
 
 @Component({
@@ -12,5 +12,10 @@ export class HeaderComponent {
     this._carService.activeClass.subscribe((res:boolean)=>{
       this.activeClass = res
     })
+  }
+
+  @ViewChild('navToggle') navTogglee! :ElementRef; 
+  navTogglebar(){
+    this.navTogglee.nativeElement.classList.remove('show')
   }
 }
