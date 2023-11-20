@@ -54,8 +54,11 @@ img{
 main {
     margin-top: 105px;
 }
-.s-grid-gap{
-    grid-row-gap: 70px;
+.s-spacing{
+    margin-bottom: 60px;
+}
+.imgOrder{
+    order: -1;
 }
 .section{
     padding: 100px 0;

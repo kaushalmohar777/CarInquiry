@@ -81,18 +81,7 @@ input.f-mail::placeholder {
     .copyright ul{
         justify-content: space-between;
     }
+    .f-top {
+        padding: 60px 0;
+    }
 }
-
-
-
-/* footer::after {
-    content: "";
-    position: absolute;
-    border-right: 906px solid transparent;
-    border-left: 990px solid transparent;
-    left: 0;
-    top: -90px;
-    border-bottom: 90px solid #0d214a;
-    border-top: 0 solid transparent;
-    right: 0;
-} */
