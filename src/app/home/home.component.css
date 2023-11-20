@@ -169,7 +169,7 @@ input[type="date"]{
         display: none;
     }
     .quote-section h2 {
-        width: 50%;
+        width: 80%;
     }
     .content .con-img + h3 {
         font-size: 22px;
@@ -178,7 +178,8 @@ input[type="date"]{
 
 @media (max-width:300px) {
     .banner-section h1 {
-        padding-right:50px ;
+        padding-right:10px ;
+        font-size: 30px;
     }
     .banner-section h3{
         padding-right:0px
