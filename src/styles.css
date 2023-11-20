@@ -45,6 +45,9 @@ a{
 img{
     width: 100%;
 }
+.form-title span {
+    color: #017ef6;
+}
 .grid-gap {
     grid-row-gap: 35px;
 }
@@ -57,9 +60,7 @@ main {
 .s-spacing{
     margin-bottom: 60px;
 }
-.imgOrder{
-    order: -1;
-}
+
 .section{
     padding: 100px 0;
 }

@@ -88,6 +88,9 @@
 }
 
 @media (max-width:767px) {
+    .imgOrder{
+        order: -1;
+    }
     .desktop-view{
         display: none;
     }
