@@ -175,3 +175,13 @@ input[type="date"]{
         font-size: 22px;
     }
 }
+
+@media (max-width:350px) {
+    .banner-section h1 {
+        padding-right:80px ;
+    }
+    .banner-section h3{
+        padding-right:16px
+    }
+}
+
