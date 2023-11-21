@@ -1,4 +1,4 @@
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { RouteDetailService } from '../route-detail.service';
@@ -29,12 +29,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.counter();
     this._carRoute.activeClass.next(true);
-    // console.log(this._carRoute.activeClass.value)
     
+    // header btn click scrolling method start=======
+    this._carRoute.taggle.subscribe((res:any)=>{
+      this.gotoTop();
+    })
+    // header btn click scrolling method end=======
+
   }
   ngOnDestroy(): void {
     this._carRoute.activeClass.next(false);
-    // console.log(this._carRoute.activeClass.value)
   }
   mailForm = new FormGroup({
     from_locaton: new FormControl(null, Validators.required),

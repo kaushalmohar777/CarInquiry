@@ -1,5 +1,6 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, ViewChild } from '@angular/core';
 import { RouteDetailService } from '../route-detail.service';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,10 @@ export class HeaderComponent {
 
   @ViewChild('navToggle') navTogglee! :ElementRef; 
   navTogglebar(){
+    this.navTogglee.nativeElement.classList.remove('show')
+  }
+  goTop(event:any){
+    this._carService.taggle.next(event.type)
     this.navTogglee.nativeElement.classList.remove('show')
   }
 }

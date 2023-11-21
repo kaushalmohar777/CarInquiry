@@ -55,7 +55,7 @@ img{
     background: var(--formBg-color--);
 }
 main {
-    margin-top: 105px;
+    margin-top: 115px;
 }
 .s-spacing{
     margin-bottom: 60px;
@@ -100,6 +100,7 @@ section p {
     border-radius: 5px;
     font-weight: 500;
 }
+
 .card-item {
     border: 1px solid var(--border-color--);
     padding: 40px;
@@ -481,7 +482,7 @@ form .ctm-btn {
     width: 90px;
 }
 .exprience-section .circle-img {
-    width: 100px;
+    width: 120px;
 }
 .circle1 {
     border: 1px solid #2a3a58;

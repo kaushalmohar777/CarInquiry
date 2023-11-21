@@ -7,7 +7,7 @@ header {
 }
 header .navbar-brand {
     display: inline-block;
-    width: 70px;
+    width: 100px;
 }
 header .navbar-nav .nav-link {
     margin: 0 10px;
@@ -54,11 +54,23 @@ header .nav-item a.active::after,
 header .nav-item a:hover::after{
     width: 100%;
 }
-
+header .ctmOrangeTrans-btn{
+    border: 1px solid var(--carPrimary-color--);
+    margin-right: 20px;
+    padding: 11px 25px;
+}
+header .ctmOrangeTrans-btn:hover{
+    background: var(--carPrimary-color--);
+    color: var(--carWhite-color--);
+}
 @media (max-width:991px){
     header .nav-item a.active::after,
     header .nav-item a:hover::after{
         width: 21%;
+    }
+    header .ctmOrangeTrans-btn{
+        margin: 0;
+        margin-bottom: 10px;
     }
 
 }
