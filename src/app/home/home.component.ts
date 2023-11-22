@@ -125,31 +125,32 @@ export class HomeComponent implements OnInit, OnDestroy {
       left: 0,
       behavior: 'smooth',
     });
+    
   }
   // window scrolling function end==============
 
-  customers: number = 1000;
-  Vehicles: number = 10000
+  // customers: number = 1000;
+  // Vehicles: number = 10000
   year: number = 0
-  drivers: number = 0
+  // drivers: number = 0
   counter() {
-    setInterval(() => {
-      if (this.customers < 10000) {
-        this.customers = this.customers + 25
-      }
-    }, 10)
+    // setInterval(() => {
+    //   if (this.customers < 10000) {
+    //     this.customers = this.customers + 25
+    //   }
+    // }, 10)
 
-    setInterval(() => {
-      if (this.Vehicles < 1000000) {
-        this.Vehicles = this.Vehicles + 2500
-      }
-    }, 10)
+    // setInterval(() => {
+    //   if (this.Vehicles < 1000000) {
+    //     this.Vehicles = this.Vehicles + 2500
+    //   }
+    // }, 10)
 
-    setInterval(() => {
-      if (this.drivers < 6000) {
-        this.drivers = this.drivers + 250
-      }
-    }, 100)
+    // setInterval(() => {
+    //   if (this.drivers < 6000) {
+    //     this.drivers = this.drivers + 250
+    //   }
+    // }, 100)
 
     setInterval(() => {
       if (this.year < 15) {

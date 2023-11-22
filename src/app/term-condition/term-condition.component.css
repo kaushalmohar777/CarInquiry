@@ -11,3 +11,12 @@ h1{
     list-style:unset;
     margin-bottom: 10px;
 }
+.wrapper ol li strong{
+    display: block;
+}
+.termConditon-section p {
+    margin-bottom: 15px;
+    color: var(--carBlack-color--);
+    font-weight: 400;
+    font-size: 16px;
+}

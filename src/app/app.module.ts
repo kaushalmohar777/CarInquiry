@@ -15,6 +15,7 @@ import { TermConditionComponent } from './term-condition/term-condition.componen
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AboutComponent } from './about/about.component';
     FaqComponent,
     TermConditionComponent,
     ServicesComponent,
-    AboutComponent
+    AboutComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,

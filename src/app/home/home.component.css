@@ -87,7 +87,11 @@ input[type="date"]{
     width: 30%;
     right: 20%;
 }
-
+.ctm-dropdown .dropdown-toggle::after{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+}
 /* responsive css start================== */
 
 @media (max-width:1024px) {

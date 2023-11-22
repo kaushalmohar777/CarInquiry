@@ -164,6 +164,9 @@
     .form-title h2{
         margin-bottom: 20px;
     }
+    .form-title span {
+        display: block;
+    }
     .service-img {
         margin-bottom: 12px;
     }

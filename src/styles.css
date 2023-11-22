@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; scroll-behavior: smooth}
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 *{
@@ -244,10 +245,6 @@ form .ctm-btn {
 /* form section css end=============== */
 
 /* banner section css start============== */
-/* .banner-section{
-    background: url(../src/assets/images/banner-img.png) center no-repeat;
-    background-size: cover;
-} */
 .banner-slider{
     padding: 300px 0;
 }
@@ -317,10 +314,6 @@ form .ctm-btn {
     height: 120px;
 }
 /* step-section section css end===================  */
-/* .spingCompany .card-item {
-    border: none;
-    background: var(--formBg-color--);
-} */
 .spingCompany .card-item:hover{
     background: var(--formBg-color--);
     /* border-color:var(--formBg-color--) ; */
@@ -378,8 +371,6 @@ form .ctm-btn {
 
 /* quote-section css start============= */
 .quote-section{
-    /* background: var(--carBlack-color--); */
-    /* background: url(../src/assets/images/banner-imgg.png); */
     background: url(../src/assets/images/speedy-banner.png);
     color: var(--carWhite-color--);
     padding: 130px 0;
@@ -449,16 +440,6 @@ form .ctm-btn {
 /* renking-section css end===================== */
 
 /* exprience-section css start=================== */
-/* .exprience-section::before {
-    content: "";
-    background: url(../src/assets/images/expricrRaqtangle.png) center no-repeat;
-    position: absolute;
-    bottom: -26%;
-    width: 100%;
-    height: 28%;
-    left: 0;
-    right: 0;
-} */
 .exprience-section{
     background: var(--carBlack-color--);
     padding-top: 110px;
@@ -519,14 +500,6 @@ form .ctm-btn {
 .qns-wrapper {
     height: 400px;
 }
-/* .qns-wrapper .accordion-button:focus,
-.qns-wrapper .accordion-button:not(.collapsed)
-.qns-wrapper .accordion-button:hover{
-    background: var(--carPrimary-color--);
-    color: var(--carWhite-color--);
-} */
-
-
 /* frequentlyquestions-section css end ============== */
 
 /* latest-stories-section css start============= */
@@ -554,20 +527,16 @@ form .ctm-btn {
 
 /* transport-work-section css start================ */
 .transportWork-wrapper {
-    /* display: flex;
-    justify-content: space-around; */
     margin-top: 120px;
 }
 .transportWork-wrapper .row{
     grid-row-gap: 100px;
 }
 .transport-item {
-    /* width: 20%; */
-    /* margin-right: 20px; */
+   
     padding: 20px;
     border: 1px solid #ccc;
-    /* background: var(--carPrimary-color--); */
-    /* color: var(--carWhite-color--); */
+    
     border-radius: 5px;
     position: relative;
     text-align: center;
@@ -579,8 +548,7 @@ form .ctm-btn {
     border: 1px solid var(--carPrimary-color--);
     color: var(--carWhite-color--);
     transform: translateY(-15px);
-    /* box-shadow: rgba(12, 36, 83, 0.2) 0px 1px 1px, rgba(12, 36, 83, 0.2) 0px 2px 2px, rgba(12, 36, 83, 0.2) 0px 4px 4px, rgba(12, 36, 83, 0.2) 0px 8px 8px, rgba(12, 36, 83, 0.2) 0px 16px 16px; */
-    /* box-shadow: rgba(1, 126, 246, 0.2) 0px 1px 1px, rgba(1, 126, 246, 0.2) 0px 2px 2px, rgba(1, 126, 246, 0.2) 0px 4px 4px, rgba(1, 126, 246, 0.2) 0px 8px 8px, rgba(1, 126, 246, 0.2) 0px 16px 16px; */
+    
 }
 .transport-item .t-img {
     width: 130px;
@@ -596,7 +564,6 @@ form .ctm-btn {
     top: -70px;
     left: 0;
     right: 0;
-    /* left: 23%; */
     box-shadow: rgba(12, 36, 83, 0.2) 0px 1px 1px, rgba(12, 36, 83, 0.2) 0px 2px 2px, rgba(12, 36, 83, 0.2) 0px 4px 4px, rgba(12, 36, 83, 0.2) 0px 8px 8px, rgba(12, 36, 83, 0.2) 0px 16px 16px;
 }
 .transport-item .t-content{

@@ -5,8 +5,8 @@ footer{
     background: var(--carBlack-color--);
 }
 footer p {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 300;
 }
 a{
     color: var(--carWhite-color--);
@@ -16,7 +16,7 @@ svg{
 }
 ul li{
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 35px;
 }
 .footer-logo {
@@ -70,7 +70,7 @@ input.f-mail::placeholder {
 }
 
 .copyright {
-    border-top: 1px dashed;
+    border-top: 1px dashed #ffffff54;
     padding: 29px 0px;
 }
 
@@ -87,4 +87,9 @@ input.f-mail::placeholder {
     .f-content p span {
         margin-left: 7px;
     }
+    .copyright ul li{
+        margin-right:0;
+        font-size: 10px;
+    }
+    
 }
